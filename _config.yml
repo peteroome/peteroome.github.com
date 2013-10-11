@@ -2,4 +2,4 @@ stylus:
   compress: true
   path: ./css
 
-paginate: 3
+paginate: 5
