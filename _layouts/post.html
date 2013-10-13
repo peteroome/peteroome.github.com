@@ -1,0 +1,9 @@
+{% include header.html %}
+<section class="content">
+  <article>
+    <h2>{{ page.date | date: "%-d %B %Y" }}</h2>
+    <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    {{ content }}
+  </article>
+</section>
+{% include footer.html %}
