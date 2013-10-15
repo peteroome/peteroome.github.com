@@ -57,15 +57,27 @@ body {
   height: 100%;
 }
 
+h1, h2 {
+  color: $orange;
+  letter-spacing: -1px;
+}
+
 h1 {
   line-height: 118%;
   font-weight: 900;
   font-size: 2em;
   margin: 0 0 12px;
-  letter-spacing: -1px;
 }
 
 h2 {
+  line-height: 118%;
+  font-size: 1.5em;
+  font-weight: 900;
+  margin: 40px 0 12px;
+  text-transform: capitalize;
+}
+
+h4 {
   font-family: 'Lato', sans-serif;
   font-size: 0.9em
   color: $blue
@@ -74,10 +86,15 @@ h2 {
 }
 
 p {
-  line-height: 150%;
+  line-height: 140%;
   font-size: 1.1em;
-  margin: 0 0 23px 0;
+  margin: 0 0 18px 0;
   color: #333332;
+}
+
+p code {
+  font-style: italic;
+  font-size: 0.95em;
 }
 
 a {
@@ -89,6 +106,13 @@ a:hover {
   color: $dark-orange;
 }
 
+pre {
+  margin: 0 0 23px
+}
+
+code {
+  line-height: 140%;
+}
 
 /* #Media Queries
 ================================================== */
