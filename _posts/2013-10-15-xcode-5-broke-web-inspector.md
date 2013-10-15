@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Xcode 5 broke the Safari Web Inspector
+date: 2013-10-15 10:29:00
 ---
 
 So it turns out that along with the release of iOS 7 and Xcode 5, Web Inspector inside Safari has broken.
