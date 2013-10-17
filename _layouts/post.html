@@ -3,7 +3,7 @@
   <article>
     <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
     <div class='meta'>
-      <h4>{{ page.date | date: "%D" }}, {{ page.content | reading_length }}</h4>
+      <h4>{{ page.date | date: "%d/%m/%Y" }}, {{ page.content | reading_length }}</h4>
     </div>
     {{ content }}
   </article>
