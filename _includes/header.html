@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    {% include meta.html %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
-
     <link href='http://fonts.googleapis.com/css?family=Lato:900|Merriweather:400,900' rel='stylesheet' type='text/css'>
-
     <link rel="stylesheet" type="text/css" href="/css/all.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/css/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>{{ site.name }}</title>
-    <meta name="description" content="{{ site.description }}">
+    <title>{{ site.name }} - {{ page.title }}</title>
   </head>
   <body>
     {% include analytics.html %}
     <header>
       <nav>
         <a href="/index.html" class="home" >Peter Roome</a>
+        <a href="http://twitter.com/zoltarSpeaks" target="_blank" class="twitter">@zoltarSpeaks</a>
       </nav>
     </header>

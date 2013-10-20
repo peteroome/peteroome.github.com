@@ -11,15 +11,16 @@ As a result i needed to find the PID's of those workers and kill them manually.
 First port of call is to find the PID's of the processes that are still running. 
 
 In this case, 5000 was the port i'd been running on…
-    lsof -i :5000
+
+    $ lsof -i :5000
 
 ## Manually kill the PID's
 Then it was simply a case of manually killing the PID's id found…
 
-    kill -9 PID_NUMBER
+    $ kill -9 PID_NUMBER
 
 …replace PID_NUMBER with the actual number retrieved with the first command.
 
 I worked out that multiple PID's could be killed with a single command too, simply by adding them to the end of the line, for example:
 
-    kill -9 PID_NUMBER_1 PID_NUMBER_2 PID_NUMBER_3
+    $ kill -9 PID_NUMBER_1 PID_NUMBER_2 PID_NUMBER_3
