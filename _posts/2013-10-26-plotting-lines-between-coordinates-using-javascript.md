@@ -18,16 +18,16 @@ Seemed straight forward enough…
     {% highlight coffeescript %}
     genCoords = ->
       coords = 
-        x: Math.random() * 600 +200
-        y: Math.random() * 600 +200
+        x: Math.random() * 500 +25
+        y: Math.random() * 500 +50
       return coords
     {% endhighlight %}
 
-This was based on the idea that i'd have an 800x800 canvas so i wanted all my coordinates to easily fit within that.
+This was based on the idea that i'd have an 700x700 canvas so i wanted all my coordinates to easily fit within that.
 
 I figured straight lines between points would be kind of sharp and ugly, so immediately turned my attentions to curves or arcs. As it is, it turns out drawing smooth curves from one set of x:y coordinates to another is quite hard to do and requires quite a lot of maths, so I diverted my attention to [KineticJS](http://kineticjs.com/ "KineticJS Framework") (this was just an experiment remember). As I hoped, Kinetic provides a far more useable method: `Kinetic.Spline`, for achieving the arc I was looking for.
 
-So here is is, [500 random coordinates connected to one another via lines](http://jsfiddle.net/zoltarSpeaks/53wpB/3/ "JSFiddle Example")…
+So here it is, [500 random coordinates connected to one another via lines](http://jsfiddle.net/zoltarSpeaks/53wpB/3/ "JSFiddle Example")…
     
     {% highlight coffeescript %}
     stage = new Kinetic.Stage
@@ -79,3 +79,7 @@ So here is is, [500 random coordinates connected to one another via lines](http:
 And an example of what it looks like…
 
 ![A Beautiful Mess](/images/A-Beautiful-Mess.png "A Beautiful Mess")
+
+Now, it looks like a bit of a mess but i love the fact that the whole thing is focused around this 700x700 frame i've created for it, even though a lot of the lines escape the boundaries.
+
+Next step for this experiment will be to pull in some real coordinates. Watch this space…
