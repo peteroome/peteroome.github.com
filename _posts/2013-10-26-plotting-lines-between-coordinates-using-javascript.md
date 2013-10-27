@@ -27,21 +27,21 @@ This was based on the idea that i'd have an 700x700 canvas so i wanted all my co
 
 I figured straight lines between points would be kind of sharp and ugly, so immediately turned my attentions to curves or arcs. As it is, it turns out drawing smooth curves from one set of x:y coordinates to another is quite hard to do and requires quite a lot of maths, so I diverted my attention to [KineticJS](http://kineticjs.com/ "KineticJS Framework") (this was just an experiment remember). As I hoped, Kinetic provides a far more useable method: `Kinetic.Spline`, for achieving the arc I was looking for.
 
-So here it is, [500 random coordinates connected to one another via lines](http://jsfiddle.net/zoltarSpeaks/53wpB/3/ "JSFiddle Example")…
+So here it is, [500 random coordinates connected to one another via lines](http://jsfiddle.net/zoltarSpeaks/53wpB/4/ "JSFiddle Example")…
     
     {% highlight coffeescript %}
     stage = new Kinetic.Stage
         container: 'container'
-        width: 5000
-        height: 5000
+        width: 600
+        height: 500
         
     layer = new Kinetic.Layer()
     splines = []
 
     genCoords = ->
       coords = 
-        x: Math.random() * 600 +200
-        y: Math.random() * 600 +200
+        x: Math.random() * 350
+        y: Math.random() * 300 +50
       return coords
 
     draw = ->
@@ -59,8 +59,8 @@ So here it is, [500 random coordinates connected to one another via lines](http:
         x: 100
         y: 50
         points: points
-        stroke: '#cecece'
-        strokeWidth: 1
+        stroke: '#fff'
+        strokeWidth: 0.5
         tension: 1
 
       splines.push spline
@@ -76,9 +76,10 @@ So here it is, [500 random coordinates connected to one another via lines](http:
     draw()
     {% endhighlight %}
 
-And an example of what it looks like…
+And a couple of examples of what it looks like…
 
 ![A Beautiful Mess](/images/A-Beautiful-Mess.png "A Beautiful Mess")
+![A Beautiful Black Mess](/images/A-Beautiful-Mess-Black.png "A Beautiful Black Mess")
 
 Now, it looks like a bit of a mess but i love the fact that the whole thing is focused around this 700x700 frame i've created for it, even though a lot of the lines escape the boundaries.
 
