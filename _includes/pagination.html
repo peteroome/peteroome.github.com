@@ -2,7 +2,11 @@
 <ul class="pagination">
   <li class='previous'>
     {% if paginator.previous_page %}
-      <a href="/page{{ paginator.previous_page }}" class="previous">&#9001;  Previous</a>
+      {% if paginator.previous_page == 1 %}
+        <a href="/" class="previous">&#9001;  Previous</a>
+      {% else %}
+        <a href="/page{{ paginator.previous_page }}" class="previous">&#9001;  Previous</a>
+      {% endif %}
     {% else %}
       <span class="previous">&#9001;  Previous</span>
     {% endif %}
