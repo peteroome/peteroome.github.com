@@ -14,3 +14,5 @@ The people who i recognise as being successful and have achieved impressive thin
 * And they're the first to offer their help in the firstplace.
 
 This has surprised me somewhat but it also puts a massive smile on my face.
+
+__Lesson learnt:__ Be as helpful as possible, whenever possible because it eventually comes back to you tenfold.
