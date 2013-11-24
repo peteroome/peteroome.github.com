@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Using Javascript to plot lines between coordinates on a canvas.
 ---
 

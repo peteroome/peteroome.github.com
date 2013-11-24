@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Defining and exposing environment variables with Hem for use in a SpineJS app.
 ---
 

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Killing Foreman Workers Locally on OS X.
 ---
 

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Xcode 5 broke the Safari Web Inspector
 date: 2013-10-15 10:29:00
 ---

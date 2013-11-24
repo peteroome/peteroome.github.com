@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Using arguments in Rake tasks and their dependent tasks too.
 ---
 

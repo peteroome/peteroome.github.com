@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: A Jekyll plugin to how long a post will take to read
 date: 2013-10-15 23:01:45
 ---

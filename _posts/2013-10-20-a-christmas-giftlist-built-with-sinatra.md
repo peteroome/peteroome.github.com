@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: A Christmas Gift List Built With Sinatra, Mongoid and hosted on Heroku.
 ---
 

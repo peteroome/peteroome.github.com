@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: App availability monitoring with New Relic (and how to stop your Heroku app from falling asleep)
 ---
 
