@@ -1,0 +1,16 @@
+---
+layout: post
+title: Automating the Hem Build process and comitting to a phonegap repo on github for build
+---
+
+I stumbled across a problem earlier today that i wasn't aware i should expect. I was prevented, by the Adobe Phonegap Build tool, from pulling my repo from Github and building because the project was too large (there is a 15mb limit). In my research prior to commencing the Pingle project, i didn't come across any warning that this might crop up - but then again i wasn't looking for advice on this.
+
+It turns out it's quite a common problem for a lot of people using Phonegap as a lot of projects being worked on contain videos, lots of graphics and perhaps un-minified code too (?!). Anyway, Pingle is a pretty lean app when it comes to assets, a couple of images, a custom font and the associated splash screens and mobile device icons; nothing particularly out of the oridinary.
+
+However, despite the small size of my project my repo had escalated to 90mb in size. I had a few options at this point:
+
+Step 1: Tidy up my repo a bit. Optimize my images (using ImageOptim), delete some stale files and recommit. I was hoping that the simple task of optimizing the images alone would be enough to take me back under the 15mb threshold. Alas, it wasn't.
+
+Step 2: Another option was to simply forgo use of the Adobe Build tool and just build my app locally. This didn't sound very appealing and i didn't want to go down this path.
+
+Step 3: Pingle has been built (for now) using the SpineJs framework. All of the associated Node Modules and uncompiled 
