@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://peteroome.com</loc>
+<lastmod>2013-11-24 00:00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://peteroome.com/2013/10/20/killing-foreman-workers-locall.html</loc>
+<lastmod>2013-11-24 00:00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://peteroome.com/2013/10/26/plotting-lines-between-coordinates-using-javascript.html</loc>
+<lastmod>2013-11-24 00:00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://peteroome.com/2013/10/27/a-note-on-successful-people.html</loc>
+<lastmod>2013-11-24 00:00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://peteroome.com/2013/11/23/defining-environment-variables-for-a-spinejs-app.html</loc>
+<lastmod>2013-11-24 00:00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://peteroome.com/2013/11/24/using-arguments-in-rake-tasks-and-their-dependent-tasks.html</loc>
+<lastmod>2013-11-24 00:00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://peteroome.com/index.html</loc>
+<lastmod>2013-11-24 00:00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://peteroome.com/page2</loc>
+<lastmod>2013-11-24 00:00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+</urlset>
