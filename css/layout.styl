@@ -14,15 +14,15 @@ header
       
       &.home
         color: white
-        font-size: 1.4em
+        font-size: 1em
 
       &.twitter
           position: absolute
           right: 0
-          top: 4px
+          top: 0
 
 section
-  padding: 50px 0
+  padding: 30px 0
   min-height: 100%
   height: auto !important
   height: 100%
@@ -52,7 +52,7 @@ section
 
 ul.index
   li
-    margin: 0 0 75px
+    margin: 0 0 40px
 
 .meta
   margin: 0 0 12px
@@ -67,7 +67,7 @@ footer
 
   div
     display: inline-block
-    width: 49.5%
+    width: 49%
 
     &.right
       text-align: right;
@@ -77,3 +77,26 @@ footer
 
   p, a
     color: $white
+
+
+// Media queries
+@media only screen and (min-width: 768px)
+  header
+    nav
+      a.home
+        font-size: 1.4em
+
+      a.twitter
+        top: 4px
+
+  section
+    padding: 50px 0
+
+  ul.index
+    li
+      margin: 0 0 75px
+
+
+  footer
+    div
+      width: 49.5%

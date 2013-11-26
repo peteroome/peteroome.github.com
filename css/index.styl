@@ -64,9 +64,9 @@ h1, h2 {
 }
 
 h1 {
-  line-height: 118%;
+  line-height: 135%;
   font-weight: 900;
-  font-size: 2em;
+  font-size: 1.4em;
   margin: 0 0 5px;
 }
 
@@ -83,11 +83,12 @@ h4 {
   font-size: 0.9em
   color: $blue
   letter-spacing: 0.1em
+  line-height: 135%
 }
 
 p {
   line-height: 145%;
-  font-size: 1.1em;
+  font-size: 0.95em;
   margin: 0 0 18px 0;
   color: #333332;
 }
@@ -120,6 +121,21 @@ code {
 
 /* #Media Queries
 ================================================== */
+@media only screen and (min-width: 768px){
+  h1 {
+    line-height: 118%;
+    font-size: 2em;
+  }
+
+  h4 {
+    line-height: auto;
+  }
+
+  p {
+    line-height: 145%;
+    font-size: 1.1em;
+  }
+}
 
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {}
