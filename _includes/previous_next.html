@@ -1,0 +1,26 @@
+<section class="next-previous">
+  <ul>
+    <li class="previous-article">
+      {% if page.previous.url %}
+        <a href="{{ page.previous.url }}" title="{{ page.previous.title }} - {{ page.previous.date | date: "%d/%m/%Y" }}">
+          <span>Previously</span><br>{{ page.previous.title }}
+        </a>
+      {% else %}
+        <a href="/" title="Home">
+          <span>Start again?</span><br>Home
+        </a>
+      {% endif %}
+    </li>
+    <li class="next-article">
+      {% if page.next.url %}
+        <a href="{{ page.next.url }}" title="{{ page.next.title }} - {{ page.next.date | date: "%d/%m/%Y" }}">
+          <span>Next Up</span><br>{{ page.next.title }}
+        </a>
+      {% else %}
+        <a href="/" title="Home">
+          <span>Start again?</span><br>Home
+        </a>
+      {% endif %}
+    </li>
+  </ul>
+</section>
