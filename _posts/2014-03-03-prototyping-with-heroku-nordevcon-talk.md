@@ -8,7 +8,7 @@ I gave a talk at [NorDevCon](http://nordevcon.com/#pete_roome) on Friday (28/02/
 
 I presented on the "Big Data & Cloud" track at the conference, presenting my talk: Prototyping With Heroku. Paul the organiser asked me to speak about Heroku and I didn't think this would be too much of a problem given I use the service everyday. But, yet I proceeded to broaden the topic and talk about Heroku within the context of how I use it whilst prototyping here at Upstate. 
 
-During my talk I discussed the aim of a prototype, what is required to build a successful prototype and showed off some examples of things i've built. These examples were both good and bad with regards to prototyping. I explained in all cases what i'd done wrong and right with my builds. I discussed in further detail Akin.is, the prototype i've been working on recently, explaining the techniques we've used to ensure we successfully traverse the Build, Measure Learn #leanstartup cycle.
+During my talk I discussed the aim of a prototype, what is required to build a successful prototype and showed off some examples of things i've built. These examples were both good and bad with regards to prototyping. I explained in all cases what i'd done wrong and right with my builds. I discussed in further detail [Akin.is](http://akin.is), the prototype i've been working on recently, explaining the techniques we've used to ensure we successfully traverse the Build, Measure Learn #leanstartup cycle.
 
 ## Slides
 The slides to my talk, although quite meaningless and possibly confusing without the context of my talk, can be found over here: [http://peteroome.com/nordevcon-prototyping-talk](http://peteroome.com/nordevcon-prototyping-talk).
