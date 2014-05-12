@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Prototyping With Heroku talk at NorDevCon
+title: Prototyping With Heroku Talk At NorDevCon
 ---
 
 I gave a talk at [NorDevCon](http://nordevcon.com/#pete_roome) on Friday (28/02/2014). This is the second NorDevCon i've attended and I can safely say it's growing into a great event. The Developer conference showcases local and national talent and covers topics ranging from apprenticeships and education to abusing C# and language composition.
