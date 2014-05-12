@@ -15,6 +15,7 @@ sitemap:
     - "/atom.xml"
     - "/feed.xml"
     - "/feed/index.xml"
+    - "/css/all.css"
   include_posts:
     - "/index.html"
   change_frequency_name: "change_frequency"
