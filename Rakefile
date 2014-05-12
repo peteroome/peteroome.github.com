@@ -8,7 +8,6 @@ require "jekyll"
 # Change your GitHub reponame
 GITHUB_REPONAME = "coolbox/coolbox.github.com"
 
-
 desc "Generate blog files"
 task :generate do
   Jekyll::Site.new(Jekyll.configuration({
@@ -16,7 +15,6 @@ task :generate do
     "destination" => "_site"
   })).process
 end
-
 
 desc "Generate and publish blog to gh-pages"
 task :publish => [:generate] do
