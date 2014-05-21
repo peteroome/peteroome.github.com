@@ -4,11 +4,11 @@ comments: true
 title: Two Sentence Summaries #1
 ---
 
-I've met a lot of great people recently. Mostly entrepreneurs with great stories to tell, great ambition and an ever greater work ethics. These people are inspirational - others who are experiencing the same problems I do on a daily basis, as I do; with advice, hacks and ideas to share.
+I've met a lot of great people recently. Mostly entrepreneurs with great stories to tell, great ambition and an ever greater work ethics. These people are inspirational and what makes it even better (selfishly for me) is they're experiencing the same problems I do, on a daily basis, as I do too. And they're armed: with advice, with work/tech/marketing/life hacks and with ideas too.
 
-So, I thought it would be sensible to start recording the people I meet. You might like to consider this to be like my historical calendar. For me, this gives me someplace where I can reflect on who I've met and remember to meet with them again in the future. 
+So, I thought it would be sensible to start recording my meetings with these amazing people. You may consider this to be snapshot of my historical calendar. For me, this gives me a place where I can reflect on who I've met and remember to meet with them again in the future. 
 
-Two Sentence Summaries seemed like both a sensible approach to this small personal documentation, as well a relatively suitable title for the series. So without further ado, here it is: #1.
+Two Sentence Summaries seemed like both a sensible approach to this personal documentation, as well a relatively suitable title for the series. So without further ado, here it is: #1.
 
 ## Calum MacLeod
 *[LinkedIn Profile](https://www.linkedin.com/in/calumimacleod)*
