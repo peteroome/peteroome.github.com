@@ -17,17 +17,17 @@ Calum is an SEO consultant with a vast amount of experience within affiliate mar
 
 *Note: Rob and I had an Americano each. Calum opted for a sparkling water.*
 
-####[Ozone Coffee Roasters](http://www.ozonecoffee.co.uk/), 11 Leonard St, London EC2A 4AQ. 15/05/2014, 11:00am.
+####[Ozone Coffee Roasters](http://www.ozonecoffee.co.uk/), 11 Leonard St, London, EC2A 4AQ. 15/05/2014, 11:00am.
 
 
 ## Josh Savinson
 *[LinkedIn Profile](https://www.linkedin.com/pub/josh-savinson/22/339/b33)*
 
-An extremely bright entrepreneur who already has more experience than a man of his age should, having worked within a large number of sectors and positions. Josh is self-starter who's strengths lay within marketing technical products.
+An extremely bright entrepreneur who already has more experience than a man of his age should, having worked within a number of sectors and positions. Josh is self-starter who's strengths lay within marketing technical products.
 
 *Note: Josh, Rob and I ate lunch together as we discussed what we're all working on and how we're connected.*
 
-#### [Smiths of Smithfield](http://www.smithsofsmithfield.co.uk/), 67-77 Charterhouse St, London EC1M 6HJ. 20/05/2014, 12:30pm.
+#### [Smiths of Smithfield](http://www.smithsofsmithfield.co.uk/), 67-77 Charterhouse St, London, EC1M 6HJ. 20/05/2014, 12:30pm.
 
 
 ## Duncan Peters
@@ -37,7 +37,7 @@ Duncan is a very friendly and enthusiastic entrepreneur who I met through [Weave
 
 *Note: Rob and I had an Americano each. Duncan didn't have anything as he'd previously had a drink with his popular, off-radar, London Entrepreneur 'self-help' group.*
 
-#### [Salvation Jane](http://www.salvationjanecafe.co.uk/), Unit 2, 1 Oliver’s Yard, 55 City Rd., EC1Y1HQ. 21/05/2014, 10:30am.
+#### [Salvation Jane](http://www.salvationjanecafe.co.uk/), Unit 2, 1 Oliver’s Yard, 55 City Rd., London, EC1Y1HQ. 21/05/2014, 10:30am.
 
 
 ## Niall Smith
