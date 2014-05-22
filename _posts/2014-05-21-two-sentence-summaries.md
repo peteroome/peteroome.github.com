@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Two Sentence Summaries #1
+title: 'Two Sentence Summaries #1'
 ---
 
 I've met a lot of great people recently. Mostly entrepreneurs with great stories to tell, great ambition and an ever greater work ethics. These people are inspirational and what makes it even better (selfishly for me) is they're experiencing the same problems I do, on a daily basis, as I do too. And they're armed: with advice, with work/tech/marketing/life hacks and with ideas too.
@@ -43,7 +43,7 @@ Duncan is a very friendly and enthusiastic entrepreneur who I met through [Weave
 ## Niall Smith
 *[LinkedIn Profile](https://www.linkedin.com/pub/niall-smith/34/306/622)*
 
-Niall is a talented marketeer with experience working on tech projects, currently working for a charity. Niall is a driven character who's work ethic and initiative seem second to none - as is clear with the work he is putting into his own business: [Be Inspired Fitness](https://www.beinspiredfitness.com/), a site that connects fitness professionals with clients; also a product [PANDR](http://wearepandr.com) considered pitching for to develop.1
+Niall is a talented marketeer with experience working on tech projects, currently working for a charity. Niall is a driven character who's work ethic and initiative seem second to none - as is clear with the work he is putting into his own business: [Be Inspired Fitness](https://www.beinspiredfitness.com/), a site that connects fitness professionals with clients; also a product [PANDR](http://wearepandr.com) considered pitching for, to design and develop.
 
 *Note: Rob had an Americano, some pickles and olives. I drunk a fresh mint tea and Niall had a Latte.*
 #### [Workshop](http://www.workshopcoffee.com/), 27 Clerkenwell Road, Clerkenwell, EC1M 5RN. 21/05/2014, 12:30pm.
