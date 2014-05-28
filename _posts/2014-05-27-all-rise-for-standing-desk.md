@@ -18,7 +18,7 @@ On this particular day, if by some magical coincidence, there were lots of empty
 Anyway, I'm 5 weeks in so I thought it would be useful to someone if I reflected upon my experience:
 
 ## Week 1
-Awash with enthusiasm and energy, I forehand smashed questions as to why I was standing up, down the line with Federer style ferocity and flet confident in my decision to standup all day. This was a positive lifestyle change. My keyboard is quite wobbly.
+Awash with enthusiasm and energy, I forehand smashed questions as to why I was standing up, down the line with Federer style ferocity and felt confident in my decision to standup all day. This was a positive lifestyle change. My keyboard is quite wobbly.
 
 My morning run seems like an imposibility. I wake up feeling like I've done a normal (normal means sitting) days work.
 
