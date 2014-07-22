@@ -4,7 +4,7 @@ comments: true
 title: What Happened When My Startup Was Listed On Product Hunt
 ---
 
-I've built two products in the last few months that were both listed on [Product Hunt](http://producthunt.com). [Sisu](https://www.madewithsisu.com/), picked up by [Grégoire Gilbert (@gregoiregilbert)](http://twitter.com/gregoiregilbert) and I was responsible for posting [Flipshop](http://flipshop.io), after clearing it with the Product Hunt crew.
+I've built two products in the last few months that were both listed on [Product Hunt](http://producthunt.com). [Sisu](http://madewithsisu.com/?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog), picked up by [Grégoire Gilbert (@gregoiregilbert)](http://twitter.com/gregoiregilbert) and I was responsible for posting [Flipshop](http://flipshop.io/?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog), after clearing it with the Product Hunt crew.
 
 ## What's Product Hunt?
 Product Hunt is a community driven site. It provides a platform for a group of hand selected people to post products they find on the Internet and think are cool. The Product Hunt community up-vote the products they agree are cool and provide feedback to the founders along the way.
