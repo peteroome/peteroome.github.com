@@ -64,9 +64,13 @@ Seeing your startup listed on Product Hunt, especially when it's posted by someo
 Remember who your target audience is/was in the first place. Do the people who visit Product Hunt match the profile of your intended user? This has a huge bearing on how you should interpret comments. Which brings me onto Feedback again…
 
 * **Feedback**  
-In the most part, those early adopters who took the time to feedback on our products matched our intended audience. However, quite often this won't be the case. Before diving in with "that's a great idea" and implementing said request, take a second to think about who the feedback came from and what their use case for your product is. Do they just like hanging out on Product Hunt to try out new products and talk to founders or is your product genuinely solving a problem for them?
+In the most part, those early adopters who took the time to feedback on our products matched our intended audience. However, quite often this won't be the case. Before diving in with "that's a great idea" and implementing said request, take another second to remeber who the feedback came from and what their use case for your product is. Do they just like hanging out on Product Hunt to try out new products and talk to founders or is your product genuinely solving a problem for them?
 
-  In our case Flipshop is a fashion app. It's stereotypical and tediously clichéd for me to say, but early tech adopters aren't the first group of people who spring to mind when talking about fashion. However, Flipshop isn't aimed at high end fashion connoisseurs - we list high street brands, so perhaps the Product Hunt audience is actually fine, as a sample. The point being, critique the feedback you receive and understand the commenters stand point.
+  In our case Flipshop is a fashion app. It's stereotypical and tediously clichéd for me to say, but early tech adopters aren't the first group of people who spring to mind when talking about fashion. However, Flipshop isn't aimed at high end fashion connoisseurs - we list high street brands, so perhaps the Product Hunt audience is actually fine, as a sample.  
+
+  It would also be interesting to know what the male:female ratio is like for Product Hunt users because Flipshop is aimed (predominantly) at a female audience.  
+
+  Anyway, the point being, critique the feedback you receive and understand the commenters stand point.
 
 * **Comments**  
 Don't take them personally. They're aimed at the product, not you. It's easy to forget this and take offence so just remember.
