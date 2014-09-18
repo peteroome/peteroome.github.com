@@ -22,9 +22,16 @@ But Gerber points out, the problem with technicians running a business is that t
 
 This, I feel, has been a bit of a eureka moment for me. The concept seems obvious writing this now, almost to the point of embarrassment. But when you're working your socks off managing clients or developing products it's not easy to step back to consider how to improve the situation. How does what i'm doing scale? How do I free up my time to become a business owner rather than an employee of the business? How will working 16 hours a day get me to where I want to be in 5 years time?
 
-When I ran PANDR, I often worked 12, 14, 16 hours a day to fulfil the needs of our clients. How were we ever going to grow beyond just me, as a sole developer?
+When I ran [PANDR](http://wearepandr.com), I often worked 12, 14, 16 hours a day to fulfil the needs of our clients. How were we ever going to grow beyond just me, as a sole developer?
 
-Spending a week in Greece only highlighted this. Marketing efforts for [Sisu](http://madewithsisu.com?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog) and [Seamso](http://seamso.com?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog) took a back seat and the numbers showed. Did we miss out on Downloads or orders because of this? Probably. The point is, this shouldn't have been the case. Small tasks such as posting content to social media pages, following interesting people and collecting feedback from our customers and users should have continued without my presence.
+Spending a week in Greece only highlighted this. Marketing efforts for [Sisu](http://madewithsisu.com?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog) and [Seamso](http://seamso.com?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog) took a back seat and the numbers showed. Did we miss out on downloads or orders because of this? Probably. The point is, this shouldn't have been the case. Small tasks such as posting content to social media pages, following interesting people and collecting feedback from our customers and users should have continued without my presence.
+
+Can you guess when I've been out of the office or away from my laptop based on the graph below?
+
+![Sisu's followers growth graph](/images/sisu-twitter-follower-growth-graph.png)
+<small>- <i>Sisu's Twitter Followers Growth Graph via <a href="http://www.goodaudience.com/">Good Audience</a></i></small>
+
+I cheated a little and found some wifi in Greece, so the slow down wasn't as bad. I visited Spain on the 7th of August for a week though and you can tell.
 
 ## Remove Yourself From The Business
 
