@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: Running an early-stage, seasonal web startup at a glance
+image: /images/seasonal-app/post-header.png
 ---
 
 One of the most successful products I've created to date is [Sisu (madewithsisu.com)](https://www.madewithsisu.com/?ref=1PRyhasi). It’s also one of the only products that I've built with a revenue stream from Day 1.

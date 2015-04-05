@@ -10,6 +10,9 @@ title: Code Snippets and such like.
       <div class='meta'>
         <h4>{{ post.date | date: "%d/%m/%Y" }}, {{ post.content | reading_length }}</h4>
       </div>
+      {% if post.image %}
+        <a href="{{ post.url }}" title="Read: {{ post.title }}"><img class="postHeader" src="{{ post.image }}" /></a>
+      {% endif %}
       {{ post.excerpt }}
     </li>
   {% endfor %}

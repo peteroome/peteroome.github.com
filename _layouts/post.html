@@ -5,6 +5,9 @@
     <div class='meta'>
       <h4>{{ page.date | date: "%d/%m/%Y" }}, {{ page.content | reading_length }}</h4>
     </div>
+    {% if page.image %}
+      <a href="{{ page.url }}" title="Read: {{ page.title }}"><img class="postHeader" src="{{ page.image }}" /></a>
+    {% endif %}
     {{ content }}
 
     <div class="article-footer">
