@@ -7,7 +7,7 @@ stylus:
   path: ./css
 
 paginate: 5
-pygments: true
+highlighter: "pygments"
 
 sitemap:
   file: "/sitemap.xml"
