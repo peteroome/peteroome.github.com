@@ -6,7 +6,7 @@ require "jekyll"
 
 
 # Change your GitHub reponame
-GITHUB_REPONAME = "betahive/sisu-blog"
+GITHUB_REPONAME = "coolbox/coolbox.github.com"
 
 namespace :site do
   desc "Generate blog files"
