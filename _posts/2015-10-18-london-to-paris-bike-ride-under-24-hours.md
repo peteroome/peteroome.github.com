@@ -16,7 +16,7 @@ Based on my previous experience, our route would be similar, if not the same, bu
 **UK Leg:**  
 London -> Newhaven: (~60 miles)([Download GPX file](/gpx/london-paris/london-newhaven.gpx))  
 
-<iframe id="mapmyfitness_route" src="//snippets.mapmycdn.com/routes/view/embedded/883853213?width=600&height=400&elevation=true&line_color=E60f0bdb&rgbhex=DB0B0E&distance_markers=0&unit_type=metric&map_mode=ROADMAP&last_updated=2015-10-07T22:42:50+01:00&show_marker_every=9" height="530px" width="100%" frameborder="0"></iframe>  
+<iframe id="mapmyfitness_route" src="//snippets.mapmycdn.com/routes/view/embedded/883853213?width=600&height=400&elevation=true&line_color=E60f0bdb&rgbhex=DB0B0E&distance_markers=0&unit_type=imperial&map_mode=ROADMAP&last_updated=2015-10-07T22:42:50+01:00&show_marker_every=6" height="530px" width="100%" frameborder="0"></iframe>      
 
 **Ferry:**  
 Newhaven -> Dieppe (Ferry)  
@@ -24,7 +24,7 @@ Newhaven -> Dieppe (Ferry)
 **French Leg:**  
 Dieppe -> Paris: (~110 miles)([Download GPX file](/gpx/london-paris/dieppe-paris.gpx))  
 
-<iframe id="mapmyfitness_route" src="//snippets.mapmycdn.com/routes/view/embedded/883893001?width=600&height=400&&line_color=E60f0bdb&rgbhex=DB0B0E&distance_markers=0&unit_type=metric&map_mode=ROADMAP&last_updated=2015-10-07T22:42:55+01:00&show_marker_every=16" height="400px" width="100%" frameborder="0"></iframe>  
+<iframe id="mapmyfitness_route" src="//snippets.mapmycdn.com/routes/view/embedded/883893001?width=600&height=400&elevation=true&line_color=E60f0bdb&rgbhex=DB0B0E&distance_markers=0&unit_type=imperial&map_mode=ROADMAP&last_updated=2015-10-07T22:42:55+01:00&show_marker_every=10" height="530px" width="100%" frameborder="0"></iframe>  
 
 Quite an achievable total distance for 24 hours, assuming no hiccups along the way of course.
 
@@ -121,6 +121,9 @@ The final sprint up to the Champs Elysees ensued. We had to curb our enthusiasm 
 Bikes were lofted above our heads and photos were taken. We congratulated one another on what had been a well executed tour. No accidents, injuries, punctures or disasters. Oh, apart from Jack snapping is chain 2 minutes after we'd finished the ride. Great timing!
 
 <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="5" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:39.8148148148% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/8qbNtwBEuz/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Paris</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Pete Roome (@pete) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-10-10T15:56:34+00:00">Oct 10, 2015 at 8:56am PDT</time></p></div></blockquote>  
+
+## Saturday Night, Paris!
+Once we'd washed up back at our hotel, we headed out for some well earnt beers and food. Our friend Lambro had booked [La Grille](http://www.lagrillefaubourg.fr/) for 8pm that evening. For nearly 3 hours we drank, ate and talked about the last 24 hours. I had a tasy Octopus salad followed by steak and chips! It was heaven compared to the energy bars and sugar heavy snacks we'd been consuming on the bikes. Much fun was had.
 
 ## Fin
 Well done to Daniel, Rob, Patrick, Jack and Will. Strong riding and great company along the way. Thanks to Lambro for organising our restaurant on Saturday night and for carrying our locks to the hotel too.
