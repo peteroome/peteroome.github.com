@@ -4,7 +4,7 @@ comments: true
 title: Growth Hacking A Personalised Print Business Using Strava Segments
 ---
 
-I've recently [started to document my endeavours](http://www.peteroome.com/2016/10/01/validating-a-personalised-print-business-aimed-at-cycling-and-running-enthusiasts.html) in getting [my personalised print business](https://www.madewithsisu.com/) off the ground and generating a bit more revenue. This post is the my first attempt at documenting and formalising one of the growth hacks I'm experimenting with at the moment. I'll try and work to a standardised format when I do write them up and I hope the ideas might spark more for myself, or even you the reader.
+I've recently [started to document my endeavours](http://www.peteroome.com/2016/10/01/validating-a-personalised-print-business-aimed-at-cycling-and-running-enthusiasts.html) in getting [my personalised print business](https://www.madewithsisu.com/) off the ground and generating a bit more revenue. This post is my first attempt at documenting and formalising one of the growth hacks I'm experimenting with. I’ll work to a standardised format when I do write them up and I hope the process might spark more ideas for the future, or even for you the reader.
 
 I've already experimented informally with this hack. I've previously created two or three segments on Strava that have driven a small amount of traffic to the website. The segments were not on especially busy routes, but they did create mixed reactions. For good or for bad, people publicly tweeted at us…
 
@@ -33,7 +33,7 @@ A segment is a section of your run or ride that has an associated public (if you
 
 - It looks spammy.
 
-- URL's in segment names aren't clickable on the Strava app or on the website.
+- URL's in segment names aren't clickable on the Strava app or website.
 
 - There are 000's of segments on Strava. Standing out from the crowd will be hard.
 
@@ -51,7 +51,7 @@ Variant A will have a title of "Sisu - Your exercise data as art!" followed by t
 
 >The City of London Corporation is planning major essential maintenance works to Tower Bridge from Saturday 1 October to Friday 30 December 2016.
 
-As a result of the above, I have chosen another route in addition to London Bridge and Tower Bridge to experiment with. I've added two running segments to Victoria park, a popular destination near my office that I run around myself.
+As a result of the above, I have chosen another route in addition to London Bridge and Tower Bridge to experiment with. I've added two running segments to Victoria park, a popular destination near my office that I run myself.
 
 ## How will I measure the hack's success?
 
