@@ -1,6 +1,7 @@
 name: Pete Roome
 description: Code Snippets and such like.
 url: http://peteroome.com
+baseurl: ''
 include: [.htaccess]
 
 stylus:
@@ -22,6 +23,6 @@ sitemap:
   change_frequency_name: "change_frequency"
   priority_name: "priority"
 
-gems:
+plugins:
   - jekyll-redirect-from
   - jekyll-paginate
