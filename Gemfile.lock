@@ -207,6 +207,7 @@ GEM
     public_suffix (2.0.5)
     pygments.rb (1.2.1)
       multi_json (>= 1.0.0)
+    rake (13.0.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -243,7 +244,8 @@ DEPENDENCIES
   github-pages (= 177)
   jekyll (~> 3.6.2)
   pygments.rb (~> 1.2.1)
+  rake
   stylus (~> 1.0.2)
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
