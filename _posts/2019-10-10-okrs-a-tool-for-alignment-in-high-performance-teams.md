@@ -15,7 +15,7 @@ As with anything, you have to practice OKRs. You probably won't do them well the
 
 Sticking with it means, reflecting. What went well? What didn't go so well?
 
-## What did I learn about our OKR setting process last quarter?
+## What did I learn about our OKR setting process last quarter?
 
 We succeeded at writing clear, easy to understand company-level objectives. The team knew what they were and could remember them. It sounds simple, but it's easy to screw this - overcomplicating your OKRs or simply not talking about them frequently enough.
 
