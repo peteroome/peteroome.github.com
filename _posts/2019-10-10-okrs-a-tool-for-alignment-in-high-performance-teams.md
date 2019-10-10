@@ -7,7 +7,7 @@ Like a lot of startups, the end of one quarter and the start of another means pl
 
 If you've never heard of OKRs, here's a quick history lesson:
 
-OKR stands for: Objectives and Key Results. They're a goal setting and alignment tool for teams. OKRs are attributed to Andy Grove who introduced the concept at Intel and documented them in his 1983 book: High Output Management. OKRs have been explained by John Doerr (Kleiner Perkins): "The key result has to be measurable. But at the end you can look, and without any arguments: Did I do that or did I not do it? Yes? No? Simple. No judgments in it."
+OKR stands for: Objectives and Key Results. They're a goal setting and alignment tool for teams. OKRs are attributed to Andy Grove who introduced the concept at Intel and documented them in his 1983 book: High Output Management. OKRs have been explained by John Doerr ([Kleiner Perkins](https://www.kleinerperkins.com)): "The key result has to be measurable. But at the end you can look, and without any arguments: Did I do that or did I not do it? Yes? No? Simple. No judgments in it."
 
 ## Learning from previous OKR setting mistakes
 
