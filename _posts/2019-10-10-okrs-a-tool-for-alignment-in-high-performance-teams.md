@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Alignment in high performance teams - OKRs as a tool for alignment tool
+title: OKRs - a tool for alignment in high performance teams
 ---
 
 Like a lot of startups, the end of one quarter and the start of another means planning - more specifically OKR planning.
