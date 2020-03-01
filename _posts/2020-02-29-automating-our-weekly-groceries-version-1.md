@@ -76,6 +76,9 @@ One of the simplest things I thought we could do to get started solving these pr
 
 I read about a meal prep app on Reddit called [Mealime](https://www.mealime.com/). Mealime provides a bunch of recipes for breakfast, lunch and dinner to create a meal plan from and then provides a grocery list. My wife and I currently use [Time Tree](https://timetreeapp.com/intl/en/) as our shared calendar, so counting up the days we were going to be at home, we were able to create a meal plan with Mealime pretty quickly, in under 5 minutes (after some practice).
 
+![Mealime grocery list export in draft email](/images/2020-02-29-automating-our-weekly-groceries-version-1/mealime-email-draft.png)
+
+
 With our meal plan, I am able to export the grocery list. I've been saving the list as a draft email on my phone that I can open on my laptop. I then copy + paste the grocery list into a [spreadsheet](https://docs.google.com/spreadsheets/d/17DoaxqG8NeV6MfX9X8rCxGQda9LZ8S67oW_rzwjs8Yc/edit?usp=sharing). Here, I can add tick-boxes and check what I already have in the kitchen. I can combine this with a list of essentials that we buy on a weekly basis (e.g. kitchen towel, bottled water) and use the `FILTER` function to build a final shopping list.
 
 LINK: [My grocery list spreadsheet](https://docs.google.com/spreadsheets/d/17DoaxqG8NeV6MfX9X8rCxGQda9LZ8S67oW_rzwjs8Yc/edit?usp=sharing).
