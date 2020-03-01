@@ -6,31 +6,33 @@ title: Automating my family's grocery shopping to reduce costs and waste.
 
 I love food and I love cooking, but I loathe grocery shopping. Deciding what to cook and the time it takes to find the groceries (in-store and online). Like everyone else I'm kind of busy and would rather spend my spare time with my family and friends. In addition, I casually follow the FIRE (Financial Independence Retire Early) mentality, minimising living costs where possible. I hate waste too - particularly food waste. So I have made it my mission recently to see what I can do to make this weekly chore less expensive, less wasteful and generally simpler.
 
-It’s 2020 and I can’t believe we still haven’t solved grocery shopping. Why is this even still a chore? Is it possible to imagine a scenario where we never have to think about the act of grocery shopping again?
+It’s 2020 and I can’t believe grocery shopping hasn't been "solved". Why is this even still a chore? Is it possible to imagine a scenario where we never have to think about the act of grocery shopping again?
+
+**Let me know if any of this resonates with you, via the comments section at the bottom.**
 
 ## Some context…
 My wife and I, in the grand scheme of things aren't fussy eaters. There are a few meals we like fairly frequently (Pizza, Spicy Korean Beef), but overall we like variety. I love cooking and will try my hand at new recipes on a weekly basis. During the week we aim for evening meals that take around 30-45 minutes (tops) to prep due to our schedules, especially now that we have a new born to juggle too. Neither of us have any dietary requirements although we're becoming more aware of how much of an impact eating meat has on the planet. [Cowspiracy](https://www.imdb.com/title/tt3302820/) and [The Game Changers](https://www.imdb.com/title/tt7455754) were both eye opening for us.
 
 ## What to eat
-In the past, my wife and I have had /that/ daily SMS conversation that I'm sure a lot of couples and housemates have - you know the one…
+In the past, my wife and I have had *that* daily SMS conversation that I'm sure a lot of couples and housemates have - you know the one…
 
-**Me:** What do you fancy for dinner?
+**You:** What do you fancy for dinner?
 
-**Wife:** I don't mind
+**Them:** I don't mind
 
-**Me:** [Lambs brains on toast?](https://www.ft.com/content/c023452a-9c34-11e4-b9f8-00144feabdc0)
+**You:** [Lambs brains on toast?](https://www.ft.com/content/c023452a-9c34-11e4-b9f8-00144feabdc0)
 
 ![Lambs brains on toast?](/images/2020-02-29-automating-our-weekly-groceries-version-1/brains.jpg)
 
-**Wife:** Not that
+**Them:** Not that
 
-**Me:** Ok, so anything you're in the mood for at all? Need inspiration.
+**You:** Ok, so anything you're in the mood for at all? Need inspiration.
 
-**Wife:** Pizza, takeaway?
+**Them:** Pizza, takeaway?
 
-**Me:** Ugh, it's expensive and makes me fat
+**You:** Ugh, it's expensive and makes me fat
 
-**Wife:** Ok, I don't mind then
+**Them:** Ok, I don't mind then
 
 This conversation is frustrating for whoever initiates it. Worse still for that person, they then need the mental energy to research recipes and check we can get all the ingredients from the overpriced and understocked Sainsbury's local close to home. The result… the same 5 meals on repeat (depressing). The result: we end up visiting Sainsbury's every single day of the week.
 
@@ -58,6 +60,8 @@ I am setup with 5 problems to solve when it comes to our grocery shopping…
 - Cost - avoid spending money on groceries we don't need
 - Will power support - avoid impulse purchases for a healthy
 - Waste - waste nothing
+
+**If you can relate to any of these problems, let me know via the comments section below.**
 
 ## Just in time
 Having trialled some recipe boxes, what became obvious was that despite the over packaging we weren't wasting any food. Those boxes provide just the right amount of ingredients, no more, no less. This reminded me of the [Just In Time (JIT)](https://en.wikipedia.org/wiki/Just-in-time_manufacturing) production methodology made famous by Toyota. Post World War II, Japan was cash strapped and lacked the space to build big factories, so they made their processes more lean. They built smaller factories in which the only materials housed were those on which work was currently being done. To avoid food waste I wanted to do something similar when grocery shopping.
@@ -88,7 +92,7 @@ We've been using this JIT method for 6 weeks. Here are some results and observat
 It's not all plain sailing…
 - JIT means we only plan and buy enough food for my wife and I, and any visitors we have scheduled. Unplanned visits from friends or family mean additional planning time and more than likely a visit to our local store. Unplanned visits like this don't happen very often so it's not a major worry.
 - Sometimes after a tough day we can't be bothered to cook and order takeaway. This not only increases our weekly spend on food but means at the end of the week we have spare food for a meal we've planned. In the past, we just carry this over to the next week and buy a little less - not a problem. It's ok to have a day off every now and then, right?
-- Planning and shopping still takes 60 minutes. I wonder if we can get this to 0 - fully automated.
+- Planning and shopping still takes 60 minutes. I wonder if we can get this to 0 - fully automated 🤔.
 
 ## Next steps…
 
