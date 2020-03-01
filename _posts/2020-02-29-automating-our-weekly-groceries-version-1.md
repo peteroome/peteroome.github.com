@@ -8,7 +8,7 @@ I love food and I love cooking, but I loathe grocery shopping. Deciding what to 
 
 It’s 2020 and I can’t believe grocery shopping hasn't been "solved". Why is this even still a chore? Is it possible to imagine a scenario where we never have to think about the act of grocery shopping again?
 
-**Let me know if any of this resonates with you, via the comments section at the bottom.**
+**Let me know if any of this resonates with you, via the comments section at the bottom or send me an email at <a href="mailto:pete.roome@gmail.com?subject=I%20hate%20grocery%20shopping%20too%E2%80%A6" target="_blank">pete.roome@gmail.com</a>.**
 
 ## Some context…
 My wife and I, in the grand scheme of things aren't fussy eaters. There are a few meals we like fairly frequently (Pizza, Spicy Korean Beef), but overall we like variety. I love cooking and will try my hand at new recipes on a weekly basis. During the week we aim for evening meals that take around 30-45 minutes (tops) to prep due to our schedules, especially now that we have a new born to juggle too. Neither of us have any dietary requirements although we're becoming more aware of how much of an impact eating meat has on the planet. [Cowspiracy](https://www.imdb.com/title/tt3302820/) and [The Game Changers](https://www.imdb.com/title/tt7455754) were both eye opening for us.
@@ -61,7 +61,7 @@ I am setup with 5 problems to solve when it comes to our grocery shopping…
 - Will power support - avoid impulse purchases for a healthy
 - Waste - waste nothing
 
-**If you can relate to any of these problems, let me know via the comments section below.**
+**If you can relate to any of these problems, let me know via the comments section below or send me an email at <a href="mailto:pete.roome@gmail.com?subject=I%20hate%20grocery%20shopping%20too%E2%80%A6" target="_blank">pete.roome@gmail.com</a>.**
 
 ## Just in time
 Having trialled some recipe boxes, what became obvious was that despite the over packaging we weren't wasting any food. Those boxes provide just the right amount of ingredients, no more, no less. This reminded me of the [Just In Time (JIT)](https://en.wikipedia.org/wiki/Just-in-time_manufacturing) production methodology made famous by Toyota. Post World War II, Japan was cash strapped and lacked the space to build big factories, so they made their processes more lean. They built smaller factories in which the only materials housed were those on which work was currently being done. To avoid food waste I wanted to do something similar when grocery shopping.
@@ -99,3 +99,5 @@ It's not all plain sailing…
 In my mind, the simplest next step would be the automation of getting a grocery list into our spreadsheet in the first place. First from Mealime, but in the future we would like to use recipes from other sources too.
 
 I'll post again when we've made some progress on this.
+
+**Let me know if you have any thoughts on any of this - I would love to speak with you. You can email me at <a href="mailto:pete.roome@gmail.com?subject=I%20hate%20grocery%20shopping%20too%E2%80%A6" target="_blank">pete.roome@gmail.com</a>**
