@@ -4,7 +4,7 @@ comments: true
 title: Automating my family’s grocery shopping to reduce costs and waste - Part 2
 ---
 
-So it’s been almost a month since my first post about how I am automating my family’s grocery shopping - and a lot has changed in the world. Here we are, comfortably isolated at home, practicing the art of social distancing.
+[So it’s been almost a month since my first post](https://www.peteroome.com/2020/02/29/automating-our-weekly-groceries-version-1.html) about how I am automating my family’s grocery shopping - and a lot has changed in the world. Here we are, comfortably isolated at home, practicing the art of social distancing.
 
 I’m not too sure how it is around the rest of the World, but the UK has gone bonkers panic buying groceries and household goods. In our small corner of South East London, the shelves in our local supermarkets - big and small - are bare. Fresh produce is like gold dust and the items they do have (the dregs) are limited to one or two per person depending on which store you’re in.
 
