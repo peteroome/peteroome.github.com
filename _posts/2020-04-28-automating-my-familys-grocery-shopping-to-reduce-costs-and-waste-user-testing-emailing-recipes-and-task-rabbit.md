@@ -12,15 +12,15 @@ I will quickly get to the changes I have made in the last few weeks.
 
 ### 📝 Changes
 
-✅Added a new "Grocery tasks" menu to provide two controls:
+✅ Added a new "Grocery tasks" menu to provide two controls:
 - Generate ingredients - to generate recipes and their ingredients
 - Email recipes - to email yourself a list of the recipes you have planned for the week, for future you 👨‍🎤
 
 ![Grocery tasks](/images/2020-04-28-automating-my-familys-grocery-shopping-to-reduce-costs-and-waste-user-testing-emailing-recipes-and-task-rabbit/grocery-tasks.png)
 
-✅Added three more recipes to the central set on the "Recipes" sheet
+✅ Added three more recipes to the central set on the "Recipes" sheet
 
-✅"Planning" sheet - removed to simplify the overall spreadsheet
+✅ "Planning" sheet - removed to simplify the overall spreadsheet
 
 In addition to changes I have made to the spreadsheet, there is also now some accompanying information:
 
@@ -73,11 +73,11 @@ I provided a light intro into how to use the spreadsheet - [what's covered in th
 
 Although the process was relatively smooth, Jen had two really useful pieces of feedback:
 
-1. "Sometimes we have one item but the grocery list says we need two - I need a way to input what we already have".  Wow - something I had previously overlooked but was insightful. 🤔
+📢 "Sometimes we have one item but the grocery list says we need two - I need a way to input what we already have".  Wow - something I had previously overlooked but was insightful. 🤔
 
 ![Ingredient quantities](/images/2020-04-28-automating-my-familys-grocery-shopping-to-reduce-costs-and-waste-user-testing-emailing-recipes-and-task-rabbit/ingredient-quantities.png)
 
-2. "You should group the final grocery list so it's easier to find the items when you visit the store". This was great. The tool hadn't been built for shopping in-store, but this feedback was valid. The tins of black beans will never be in the same aisle as the cilantro. 🤦🏼‍♂️ However, the order of the ingredients makes no difference when ordering online and could, therefore, be a distraction, long-term.
+📢 "You should group the final grocery list so it's easier to find the items when you visit the store". This was great. The tool hadn't been built for shopping in-store, but this feedback was valid. The tins of black beans will never be in the same aisle as the cilantro. 🤦🏼‍♂️ However, the order of the ingredients makes no difference when ordering online and could, therefore, be a distraction, long-term.
 
 ![Grouping ingredients](/images/2020-04-28-automating-my-familys-grocery-shopping-to-reduce-costs-and-waste-user-testing-emailing-recipes-and-task-rabbit/grouping-ingredients.png)
 
