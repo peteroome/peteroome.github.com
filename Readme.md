@@ -1,7 +1,7 @@
 Coolbox Blog
 =========
 
-A Jekyll blog for Sisu
+A Jekyll blog for Pete
 
 ## Start server
 jekyll serve --watch
