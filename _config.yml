@@ -1,6 +1,6 @@
 name: Pete Roome
 description: Code Snippets and such like.
-url: http://peteroome.com
+url: https://peteroome.com
 baseurl: ''
 include: [.htaccess]
 
