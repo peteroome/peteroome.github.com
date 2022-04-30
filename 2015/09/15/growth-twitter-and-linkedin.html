@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<meta name="description" content="Thinking of a Product Manager, code Snippets and activities.">
+<meta name="author" content="Pete Roome - peteroo.me">
+
+<meta property="og:title" content="Pete Roome - Growth hacking using Javascript to automate following, unfollowing and connecting on Twitter and LinkedIn">
+<meta property="og:type" content="Website">
+<meta property="og:url" content="/2015/09/15/growth-twitter-and-linkedin.html">
+<meta property="og:site_name" content="Pete Roome">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="p:domain_verify" content="1562f4586996c850b88261bbed97966a" >
+
+    <link rel="alternate" type="application/rss+xml" title="Pete Roome" href="https://peteroome.com/feed.xml">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Pete Roome - Growth hacking using Javascript to automate following, unfollowing and connecting on Twitter and LinkedIn</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-21402181-18");
+    pageTracker._trackPageview();
+    } catch(err) {}
+</script>
+    <header>
+      <nav>
+        <a href="/index.html" class="home" >Peter Roome</a>
+        <a href="https://twitter.com/zoltarSpeaks" target="_blank" class="twitter">@zoltarSpeaks</a>
+      </nav>
+    </header>
+
+<section class="content">
+  <article>
+    <h1><a href="/2015/09/15/growth-twitter-and-linkedin.html">Growth hacking using Javascript to automate following, unfollowing and connecting on Twitter and LinkedIn</a></h1>
+    <div class='meta'>
+      <h4>15/09/2015, 5 minute read.</h4>
+    </div>
+    
+      <a href="/2015/09/15/growth-twitter-and-linkedin.html" title="Read: Growth hacking using Javascript to automate following, unfollowing and connecting on Twitter and LinkedIn"><img class="postHeader" src="/images/2015-09-15-growth-twitter-and-linkedin/post-header.png" /></a>
+    
+    <p>It’s difficult to test the validity of an Internet startup without data. Most of the time this means having an audience that you can test your product on, to collect some data. Without an audience, you’re not going to prove any hypotheses on your product.</p>
+
+<p>During the 15 months I ran Upstate, we learnt that one of the most challenging aspects of our day to day work, was growing our audience.</p>
+
+<blockquote>
+  <p>Upstate was a product development agency. Our aim was to design and built Internet products with the aim of scaling any we validated. Upstate had no clients but was instead funded by an Angel Investor and earnings we made from our products.</p>
+</blockquote>
+
+<p>We learnt that writing about what we were doing (product launches, experiments and failures) and sharing it with our own audiences helped. This generated shares and likes, but it wasn’t scalable. So we started to experiment.</p>
+
+<p>There are a multitude of tools out there, free (with limitations) and paid for, to automate the growth of an Audience. We tried many of these different tools, including: <a href="http://www.goodaudience.com/">Good Audience</a>, <a href="https://unfollowers.com/">Unfollowers</a> and <a href="https://buffer.com">Buffer</a>.</p>
+
+<p>It was during this period that I began to better understand what these tools were doing and how we could replicate them for free. We were a startup on a tight budget, afterall.</p>
+
+<p>The opportunities that presented themselves were easy to spot. The usual tell tell sign was when I had to click the same button on a webpage, more than 3 or 4 times. This immediately felt like something that could and should be automated. It’s this lazyiness that a lot of social network automation tools rely on, to entice people to pay for their service. A button to “Follow all” or “Unfollow all” is often made available immediately after credit card details are entered. Other limitations that are lifted by paying for social media automation tools, include: the number of people who can be followed or followed in a single day, how many ‘posts’ can be queued up and access to more recommendations for who to follow, who to unfollow and even interesting content to share.</p>
+
+<p>In this post, I’m going to focus on growing an audience, using automation, to follow/connect and unfollow other accounts…</p>
+
+<h3 id="required-knowledge">Required knowledge</h3>
+<p>The code snippets i’m about to share need you to have a basic knowledge and understanding of the Google Chrome web inspector, in particular it’s console.</p>
+
+<p>For those who don’t know what web inspector is; open Chrome, load a web page and <code>ctrl + click</code> (OS X) on any part of it. From the menu that appears, click <code>Inspect Element</code>.</p>
+
+<p>This will open up the web inspector on your screen. You should see some tabs, which include <code>Console</code>. Select <code>Console</code> to reveal a tool that allows you to interact with the currently open webpage, live, with Javascript. For example, copy and paste this line into the console and press return:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>      <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">);</span>
+    </code></pre></figure>
+
+<p>You should see a popup that says “Hello world”.</p>
+
+<p>This technique of copying and pasting snippets into the console is something you’ll need to be able to do for these examples to work.</p>
+
+<h2 id="twitter">Twitter</h2>
+<p>Those with a proficiency in programming will stop at nothing to exploit unprotected loopholes in social networks. Twitter is no exception and has long been gamed by hackers. Although aggressive attempts to DDOS a service happen, more often than not, hackers tinkerings are merely ‘a bit of fun’.</p>
+
+<h3 id="limits">Limits</h3>
+<p>This <a href="https://support.twitter.com/articles/66885">support document on Twitter</a> lists the platforms current limits when it comes to following other accounts, but to summarize:</p>
+
+<ul>
+  <li>
+    <p>Every account can follow 2,000 users total. Once this number is reached, additional follows are allowed based on a follow to follower ratio that Twitter claims to be different for every account.</p>
+  </li>
+  <li>
+    <p>Every Twitter account is technically unable to follow more than 1,000 users per day. Unfortunately, there is no avoiding this one.</p>
+  </li>
+</ul>
+
+<h3 id="technique">Technique</h3>
+<p>We have a 1000 follows each day, to maximise. My first approach is to unfollow those followers who aren’t following me back (to maximise my following ability) and to follow as many of the 1k limit of people as possible each day.</p>
+
+<h3 id="unfollowing">Unfollowing</h3>
+<p>I use the free tier of a 3rd party service called <a href="https://manageflitter.com">ManageFlitter</a>. Once connected to my Twitter account, this service shows me the accounts that I follow but aren’t following me back. ManageFlitter provides an <code>unfollow</code> button next to each of these accounts that I can click.</p>
+
+<p>I use the following code to automate this process of unfollowing:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>      <span class="nx">a</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+          <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.Unfollow&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span>
+      <span class="p">},</span> <span class="mf">3000</span><span class="p">);</span>
+    </code></pre></figure>
+
+<p>This code will run on repeat in your browser, forever, unless you stop it. Stopping it is either a case of refreshing your browser or, copying this line of code into the console and pressing return.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>			<span class="nx">clearInterval</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+    </code></pre></figure>
+
+<p>On the free tier at least, ManageFlitter limit the number of people you can unfollow in a single day. So the process of unfollowing and following accounts is done in small batches each day, that take 5 minutes or so to complete.</p>
+
+<h3 id="following">Following</h3>
+<p>When it comes to following users my technique is as follows:</p>
+
+<ol>
+  <li>Find an account of interest to me.</li>
+  <li>Click their ‘Followers’ tab.</li>
+  <li>Follow as many of the accounts as I can, that follow the initial account I was interested in.</li>
+</ol>
+
+<p>The aim of this approach is to find other accounts that I may have something in common with, and are therefore more likely to follow back.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>      <span class="nx">a</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollHeight</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.not-following .user-actions-follow-button.js-follow-btn&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span>
+      <span class="p">},</span> <span class="mf">3000</span><span class="p">);</span>
+    </code></pre></figure>
+
+<p><strong><em>Disclaimer</em></strong><em>: This technique requires you to run code on an adhoc basis in the web inspector console. As a result, we’re not tracking the accounts we’ve followed and unfollowed in a database for example. Therefore we have no historical data to prevent us from following and unfollowing those accounts again in the future. This is will more than likely irritate those users and result in them reporting your account as spam to Twitter.</em></p>
+
+<h3 id="favouriting">Favouriting</h3>
+<p>The same approach can be used for favouriting tweets too. Simply use the Twitter search bar to search for a hastag or term you’re interested in. Once you’ve arrived at some search results of interest, for example <a href="https://twitter.com/search?q=%23madewithsisu">#madewithsisu</a>, open your web inspector console and run the following snippet…</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>      <span class="nx">a</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollHeight</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-actionButton.js-actionFavorite:visible&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span>
+      <span class="p">},</span> <span class="mf">3000</span><span class="p">);</span>
+    </code></pre></figure>
+
+<p>This will replicate clicking all the favourite buttons on the page, scroll to the bottom of the page so more content loads, and continue to favourite tweets.</p>
+
+<p>There does seem to be a limit in place for how many tweets you can follow, but for now, I don’t know what it is.</p>
+
+<h2 id="linkedin">LinkedIn</h2>
+
+<p>LinkedIn is a fun network to game. I’ll go into more detail in another post about all of the fun to be had, but in the meantime; there is a URL I found that doesn’t seem to be accessible unless you know it, called: <a href="https://www.linkedin.com/people/pymk">People You May Know (PYMK)</a>. The URL lists people LinkedIn believes you may have a connection with. You may have worked with these people, been to college with them or just know them through another connection.</p>
+
+<p>The element we’re interested in on this page is the <code>Connect</code> button. With so many of them on the page, we have the opportunity to script clicking them all automatically.</p>
+
+<p>However, a good percentage of the PYMK will have their accounts set so that inorder to connect with them, you must enter their email address. This isn’t useful to us and prevents us from automating the connection. However, the rest of the people on this page won’t have this setting enabled, meaning we can initiate a connection.</p>
+
+<p>This snippet will find all of the <code>Connect</code> buttons on the page, simulate clicking them and then scroll to the bottom of the page. When you scroll to the bottom of the page, LinkedIn kindly load more PYMK onto the screen!!!</p>
+
+<p>I’ve found that LinkedIn users are fairly similar to those on Twitter in the sense that they’re not too fussed about who they connect with. Most aren’t that bothered if they don’t know the person they’re connecting with, so it’s quite easy to grow your own list of connections.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>      <span class="nx">a</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollHeight</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;button.bt-request-buffed[data-act=&#39;request&#39;]&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span>
+      <span class="p">},</span> <span class="mf">3000</span><span class="p">);</span>
+    </code></pre></figure>
+
+<p>After a while this becomes a self fulfilling phallacy. Other users will try to connect with you - people you won’t even know. The reason for this is because of LinkedIn’s <a href="https://www.linkedin.com/wvmx/profile/rankings">Profile Rankings</a>. As you gain more connections, you naturally receive more profile views. More profile views and more connections speed you up the profile rankings. Profile Rankings are prominent on the LinkedIn mobile app - they’re right on your profile. It’s quite natural for those ranked around you to become curious about who you are and what you do, so they will take a look at your profile. This only helps to further accelerate you up the LinkedIn profile rankings.</p>
+
+<p><img src="/images/2015-09-15-growth-twitter-and-linkedin/post-header.png" alt="My own profile ranking acceleration" title="My own profile ranking acceleration" /></p>
+
+<h3 id="limitations">Limitations</h3>
+<p>There don’t seem to be any limitations to doing this through the web inspector console.</p>
+
+<p>But, this is only a short term approach to growth hacking your account. Although you’ll likely reach the dizzying heights of the Top 1% of connections in your network, you’ll just as quickly slip back down the rankings as you run out of PYMK who haven’t enabled the “Enter my address to connect” feature.</p>
+
+<p>Inbox messages from recruiters. But this is a positive if you’re job hunting, right?!</p>
+
+
+    <div class="article-footer">
+      <p>by <a href="https://www.linkedin.com/in/peteroome/" title="Pete on LinkedIn">Pete Roome</a></p>
+      <p><small>Product Manager at <a href="https://www.cazoo.co.uk/?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog" title="Cazoo" target="_blank">Cazoo</a>.</small></p>
+    </div>
+
+    
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'peteroome'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </article>
+</section>
+<section class="next-previous">
+  <ul>
+    <li class="previous-article">
+      
+        <a href="/2015/04/05/botty-the-web-through-the-eyes-of-a-google-bot-copy.html" title="Botty - The web through the eyes of a Googlebot - 05/04/2015">
+          <span>Previously</span><br>Botty - The web through the eyes of a Googlebot
+        </a>
+      
+    </li>
+    <li class="next-article">
+      
+        <a href="/2015/10/18/london-to-paris-bike-ride-under-24-hours.html" title="London to Paris Bike Ride In Under 24 Hours - 18/10/2015">
+          <span>Next Up</span><br>London to Paris Bike Ride In Under 24 Hours
+        </a>
+      
+    </li>
+  </ul>
+</section>
+  <footer>
+    <div>
+      <p><a href="/index.html">Made by Pete</a></p>
+    </div>
+
+    <div class="right">
+      <p class="copyright">&#169; 2022 Peter Roome</p>
+    </div>
+  </footer>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<meta name="description" content="Thinking of a Product Manager, code Snippets and activities.">
+<meta name="author" content="Pete Roome - peteroo.me">
+
+<meta property="og:title" content="Pete Roome - Defining and exposing environment variables with Hem for use in a SpineJS app.">
+<meta property="og:type" content="Website">
+<meta property="og:url" content="/2013/11/23/defining-environment-variables-for-a-spinejs-app.html">
+<meta property="og:site_name" content="Pete Roome">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="p:domain_verify" content="1562f4586996c850b88261bbed97966a" >
+
+    <link rel="alternate" type="application/rss+xml" title="Pete Roome" href="https://peteroome.com/feed.xml">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Pete Roome - Defining and exposing environment variables with Hem for use in a SpineJS app.</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-21402181-18");
+    pageTracker._trackPageview();
+    } catch(err) {}
+</script>
+    <header>
+      <nav>
+        <a href="/index.html" class="home" >Peter Roome</a>
+        <a href="https://twitter.com/zoltarSpeaks" target="_blank" class="twitter">@zoltarSpeaks</a>
+      </nav>
+    </header>
+
+<section class="content">
+  <article>
+    <h1><a href="/2013/11/23/defining-environment-variables-for-a-spinejs-app.html">Defining and exposing environment variables with Hem for use in a SpineJS app.</a></h1>
+    <div class='meta'>
+      <h4>23/11/2013, About a minutes read.</h4>
+    </div>
+    
+    <p>I like defining environment variables - they allow me to keep my code clean and tidy when it comes to using things like API keys &amp; secrets, usernames, passwords, connection strings etc. So where possible i use environment variables to extract the repetitive use of these. The aspect of my job that this helps with the most is when things change, later down the line. I don’t have that nervous job of making sure i’ve updated API keys and secrets in every place within my app; a couple of changes to the environment variables and we’re good to go.</p>
+
+<p>Doing this in Ruby, locally with a .env file and on Heroku too, is really easy: <a href="https://devcenter.heroku.com/articles/config-vars" title="Defining Config Vars on Heroku">https://devcenter.heroku.com/articles/config-vars</a></p>
+
+<p>However, i wasn’t so sure how to achieve the same results with our Spine app. Fortunately, Michael Bleigh came to the rescue with some useful knowledge.</p>
+
+<h2 id="defining-environment-variables-for-a-spinejs-app">Defining Environment Variables for a SpineJS App</h2>
+<p>Disclaimer: This post is based largely off of the expertise of Michael Bleigh, CEO of Divshot. Thanks for pointing me in the right direction on this one Michael: <a href="http://www.divshot.com/blog/tips-and-tricks/exposing-environment-variables-to-static-spinejs-apps/" title="Exposing Environment Variables to Static Spine.js Apps by Michael Bleigh">‘Exposing Environment Variables to Static Spine.js Apps’</a></p>
+
+<p>Using, Hem, we can write our own custom compilers. Michael shows how to write a compiler that will consume a <code>.env</code> that contains a JSON hash and expose the data.</p>
+
+<p>I started by creating a <code>slug.js</code> file in my project’s root:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>    <span class="kd">var</span> <span class="nx">hem</span> <span class="o">=</span> <span class="ow">new</span> <span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;hem&#39;</span><span class="p">));</span>
+    <span class="kd">var</span> <span class="nx">fs</span>   <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">argv</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+
+    <span class="nx">hem</span><span class="p">.</span><span class="nx">compilers</span><span class="p">.</span><span class="nx">env</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">path</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">);</span>
+      <span class="kd">var</span> <span class="nx">envHash</span> <span class="o">=</span> <span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span>
+
+      <span class="k">for</span> <span class="p">(</span><span class="nx">key</span> <span class="ow">in</span> <span class="nx">envHash</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">[</span><span class="nx">key</span><span class="p">])</span> <span class="p">{</span>
+          <span class="nx">envHash</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+
+      <span class="k">return</span> <span class="s2">&quot;module.exports = &quot;</span> <span class="o">+</span> <span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">envHash</span><span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="nx">hem</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">argv</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
+    </code></pre></figure>
+
+<p>Within the ‘app’ folder of my project i then created an <code>environment.env</code> file with a JSON hash of my values:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span></span>    <span class="p">{</span>
+      <span class="nt">&quot;RUNTIME&quot;</span><span class="p">:</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;FB_APP_ID&quot;</span><span class="p">:</span><span class="s2">&quot;MY_FACEBOOK_APP_ID&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;FB_APP_SECRET&quot;</span><span class="p">:</span><span class="s2">&quot;MY_FACEBOOK_APP_SECRET&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;FB_CHANNEL_FILE&quot;</span><span class="p">:</span><span class="s2">&quot;//dev.pingle.co.uk:9294/channel.html&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;GA_ID&quot;</span><span class="p">:</span><span class="s2">&quot;MY_GOOGLE_ANALYTICS_ID&quot;</span>
+    <span class="p">}</span>
+    </code></pre></figure>
+
+<p>These were the default values that my app would load in when served up.</p>
+
+<pre><code>$ hem server
+</code></pre>
+
+<p>And any one of these values could be overwritten very simply, for example, on compilation of the project…</p>
+
+<pre><code>$ RUNTIME=staging hem build
+</code></pre>
+
+<p>This was a great feature because it meant that i’d be able to maintain <code>Staging</code> versions of my architecture to test against, prior to deploy.</p>
+
+<h2 id="expose-the-variables">Expose the variables</h2>
+<p>In order to access the variables, we’d need to drop a little more code into our project:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>    <span class="nb">window</span><span class="p">.</span><span class="nx">env</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;environment&quot;</span><span class="p">);</span>
+    </code></pre></figure>
+
+<p>Using the exposed variables was then simply a case of using them wherever i needed them in my code, like this for example, to initialize a connection to the Facebook API:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>    <span class="nx">FB</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span> 
+      <span class="nx">appId</span><span class="o">:</span> <span class="nx">env</span><span class="p">.</span><span class="nx">FB_APP_ID</span><span class="p">,</span> 
+      <span class="nx">nativeInterface</span><span class="o">:</span> <span class="nx">CDV</span><span class="p">.</span><span class="nx">FB</span><span class="p">,</span> 
+      <span class="nx">useCachedDialogs</span><span class="o">:</span> <span class="kc">false</span> 
+    <span class="p">});</span>
+    </code></pre></figure>
+
+<p>Don’t forget to preceed your variable with the <code>env</code> element inorder to access it i.e <code>env.FB_APP_ID</code>.</p>
+
+<h2 id="further-config-values">Further Config Values</h2>
+<p>With this in mind, i created a <code>config.coffee</code> file within <code>/app/controllers/</code> that further contained some important values i’d use throughout my project, mainly my API connection URL.</p>
+
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span></span>    <span class="k">if</span> <span class="nx">env</span><span class="p">.</span><span class="nx">RUNTIME</span> <span class="o">is</span> <span class="s">&quot;staging&quot;</span>
+      <span class="nv">Config =</span>
+        <span class="nv">API_HOST: </span><span class="s">&quot;http://some-staging-api-location/api/v1&quot;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="nx">env</span><span class="p">.</span><span class="nx">RUNTIME</span> <span class="o">is</span> <span class="s">&quot;production&quot;</span>
+      <span class="nv">Config =</span>
+        <span class="nv">API_HOST: </span><span class="s">&quot;http://some-production-api-location/api/v1&quot;</span>
+    <span class="k">else</span>
+      <span class="nv">Config =</span>
+        <span class="nv">API_HOST: </span><span class="s">&quot;http://dev-api-location/api/v1&quot;</span>
+
+    <span class="nx">Config</span><span class="p">[</span><span class="s">&#39;version&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;0.1&#39;</span>
+    <span class="nv">module.exports = </span><span class="nx">Config</span>
+    </code></pre></figure>
+
+<p>Notice how the above file makes use of the environment variable <code>env.RUNTIME</code> that we defined and exposed inorder to define our API connection string.</p>
+
+<h2 id="using-our-config-variables">Using our config variables</h2>
+<p>In order to use these new settings, i need to require the file where i am about to use it, like so…</p>
+
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span></span>    <span class="nv">Config  = </span><span class="nx">require</span><span class="p">(</span><span class="s">&#39;controllers/config&#39;</span><span class="p">)</span>
+    </code></pre></figure>
+
+<p>And then simply call the variables, as you’d expect. For example…</p>
+
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span></span>      <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span>
+        <span class="nv">type: </span><span class="s">&quot;GET&quot;</span>
+        <span class="nv">dataType: </span><span class="s">&quot;json&quot;</span>
+        <span class="nv">url: </span><span class="nx">Config</span><span class="p">.</span><span class="nx">API_HOST</span> <span class="o">+</span> <span class="s">&quot;/login&quot;</span>
+    </code></pre></figure>
+
+
+    <div class="article-footer">
+      <p>by <a href="https://www.linkedin.com/in/peteroome/" title="Pete on LinkedIn">Pete Roome</a></p>
+      <p><small>Product Manager at <a href="https://www.cazoo.co.uk/?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog" title="Cazoo" target="_blank">Cazoo</a>.</small></p>
+    </div>
+
+    
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'peteroome'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </article>
+</section>
+<section class="next-previous">
+  <ul>
+    <li class="previous-article">
+      
+        <a href="/2013/10/27/a-note-on-successful-people.html" title="A note about successful people - 27/10/2013">
+          <span>Previously</span><br>A note about successful people
+        </a>
+      
+    </li>
+    <li class="next-article">
+      
+        <a href="/2013/11/24/using-arguments-in-rake-tasks-and-their-dependent-tasks.html" title="Using arguments in Rake tasks and their dependent tasks too. - 24/11/2013">
+          <span>Next Up</span><br>Using arguments in Rake tasks and their dependent tasks too.
+        </a>
+      
+    </li>
+  </ul>
+</section>
+  <footer>
+    <div>
+      <p><a href="/index.html">Made by Pete</a></p>
+    </div>
+
+    <div class="right">
+      <p class="copyright">&#169; 2022 Peter Roome</p>
+    </div>
+  </footer>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<meta name="description" content="Thinking of a Product Manager, code Snippets and activities.">
+<meta name="author" content="Pete Roome - peteroo.me">
+
+<meta property="og:title" content="Pete Roome - Understanding Our Mobile App's Data (Part 1)">
+<meta property="og:type" content="Website">
+<meta property="og:url" content="/2014/01/30/understanding-our-mobile-apps-data-part-1.html">
+<meta property="og:site_name" content="Pete Roome">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="p:domain_verify" content="1562f4586996c850b88261bbed97966a" >
+
+    <link rel="alternate" type="application/rss+xml" title="Pete Roome" href="https://peteroome.com/feed.xml">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Pete Roome - Understanding Our Mobile App's Data (Part 1)</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-21402181-18");
+    pageTracker._trackPageview();
+    } catch(err) {}
+</script>
+    <header>
+      <nav>
+        <a href="/index.html" class="home" >Peter Roome</a>
+        <a href="https://twitter.com/zoltarSpeaks" target="_blank" class="twitter">@zoltarSpeaks</a>
+      </nav>
+    </header>
+
+<section class="content">
+  <article>
+    <h1><a href="/2014/01/30/understanding-our-mobile-apps-data-part-1.html">Understanding Our Mobile App's Data (Part 1)</a></h1>
+    <div class='meta'>
+      <h4>30/01/2014, A couple of minutes read.</h4>
+    </div>
+    
+    <p>We’re approximately 4 months into the development of <a href="http://joinpingle.com">Pingle</a> and 1 month of it being available in the Google Play store. As a result, I wanted to share with you the data we’ve captured so far. This is the data currently driving our design and development decisions with regards to changes, updates and features.</p>
+
+<p><img src="/images/2014-01-30-understanding-our-mobile-apps-data-part-1/social_logo.png" alt="Pingle Logo" /></p>
+
+<p>Despite still only having a small amount of it (data), i’ve broken this post down into a few parts so as not to bore you all and so this post doesn’t end up setting some kind of word count record.</p>
+
+<h2 id="current-status">Current Status</h2>
+<p>So, iOS users of our app are still restricted by TestFlight - we are still beta testing here and our app isn’t in the Apple App Store yet. The Android version of <a href="https://play.google.com/store/apps/details?id=com.betahive.pingle&amp;hl=en">Pingle is in the Goolge Play Store</a> where it went live on 16th December.</p>
+
+<p>For the purpose of accuracy and insight, we decided it would be sensible to remove all ‘admin’ content from the data sets. This means there is no content, contributed by the Upstate team that is contributing to these stats.</p>
+
+<p>If you don’t already know what Pingle is, or how it works, the flow of our app is:</p>
+
+<ol>
+  <li>Signup!</li>
+  <li>Post a group along with a caption of what you’re doing and who you’d like to chat to.</li>
+  <li>RSVP to other posts on the app - tick yes or no as to whether you’d like to chat or not.</li>
+  <li>Get a match from another group owner who would also like to chat to you.</li>
+  <li>Send messages in a group chat room.</li>
+</ol>
+
+<p>Here are some screenshots to clarify this…</p>
+
+<p><img src="/images/2014-01-30-understanding-our-mobile-apps-data-part-1/Walkthrough.jpg" alt="Pingle Screenshots" /></p>
+
+<p>First things first, we checked on the general growth of the key areas of our app. As per the aforementioned flow, these are: <strong>signups</strong>, <strong>posts</strong>, <strong>rsvp’s</strong>, <strong>matches</strong> and <strong>messages</strong>.</p>
+
+<p>##Signups
+<img src="/images/2014-01-30-understanding-our-mobile-apps-data-part-1/pingle_signups_per_week.png" alt="Pingle Signups Per Week" />
+Things got off to a ‘lumpy’ start. This was very early on in development of the app when we were showing the prototype to friends, family and peers via TestFlight; a useful tool with a painful on-boarding process.</p>
+
+<p>The Christmas period saw our lowest signup period. This wasn’t unexpected but since our return from the holidays, we’ve put considerably more effort into marketing Pingle. This has been done via blog posts, paid adverts (Facebook, Reddit, Google Ad’s) and general social-networking too.</p>
+
+<p>We’ve been extremely happy with the signup rate over the past 3 weeks which has sat at around 20% per week.</p>
+
+<p>##Posts
+<img src="/images/2014-01-30-understanding-our-mobile-apps-data-part-1/pingle_posts_per_week.png" alt="Pingle Posts Per Week" />
+Posts are a different story. There is a general negative trend on the posting of content to Pingle, except for what looks to be an anomoly on the week starting the 13th January.</p>
+
+<p>Growth seems to be flirting around the 16% mark more recently with regards to this data point.</p>
+
+<p>##RSVP’s
+<img src="/images/2014-01-30-understanding-our-mobile-apps-data-part-1/pingle_rsvps_per_week.png" alt="Pingle RSVP's Per Week" />
+The Yes/No options have been controversial amongst the team; some hate them and think they’re a barrier to enabling people to chat with one another, others think they’re a good mechanism for validating the people you’d like to chat to and some just think the buttons need refining slightly. Whichever way you look at it, there is strong growth on the app with regard to this function; it seems to be one feature that users do not need any help in using!</p>
+
+<p>##Matches
+<img src="/images/2014-01-30-understanding-our-mobile-apps-data-part-1/pingle_matches_per_week.png" alt="Pingle Matches Per Week" />
+Again, it’s been a ‘lumpy’ start, with a dead period over the Christmas holidays that correlates with all the data i’ve presented so far. However, as with signups, growth has been good in the few weeks since we’ve been back and matches are occurring on a regular basis - it seems.</p>
+
+<p>However, all is not quite as it seems. This data is skewed in that we made a decision to implement functionality that would help to educate our users about what Pingle is for.</p>
+
+<p>Every time a new user signs up, they’re automatically generated a post and matched with Rob and I (the co-founders) so we can chat with all our users. So with regards to matches, our graph takes a similar shape to that of our signups data as a result of everyone getting a system generated match upon signup.</p>
+
+<p>Our posts data above also includes these system generated posts.</p>
+
+<p>##Messages
+<img src="/images/2014-01-30-understanding-our-mobile-apps-data-part-1/pingle_messages_per_week.png" alt="Pingle Messages Per Week" />
+Similar to signups and matches, messages have shown a positive trend over the past 3 weeks. However, this again may be due to the auto generated match and chat scenario we’ve artificially generated within Pingle for new users.</p>
+
+<h2 id="what-have-we-learnt">What have we learnt?</h2>
+<p>So the past 3 weeks, since we’ve been marketing Pingle, data is looking generally quite positive and there seems to be some level of engagement on the app when it comes to RSVP’ing to posts. However, there is clearly some disparity with this when it comes to actually posting content to the app in the firstplace.</p>
+
+<p>That said, these are very high level metrics that should probably be considered more as ‘vanity’ metrics than actual insightful, development driving content.</p>
+
+<p>In the next post, I will continue to look into Pingle’s data and i will take a more in-depth look at some of the enablers and disablers that are encouraging and equally discouraging the growth and engagement of our app.</p>
+
+
+    <div class="article-footer">
+      <p>by <a href="https://www.linkedin.com/in/peteroome/" title="Pete on LinkedIn">Pete Roome</a></p>
+      <p><small>Product Manager at <a href="https://www.cazoo.co.uk/?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog" title="Cazoo" target="_blank">Cazoo</a>.</small></p>
+    </div>
+
+    
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'peteroome'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </article>
+</section>
+<section class="next-previous">
+  <ul>
+    <li class="previous-article">
+      
+        <a href="/2014/01/26/data-consumerism-and-the-attention-economypassively.html" title="Data Consumerism and the Attention Economy - 26/01/2014">
+          <span>Previously</span><br>Data Consumerism and the Attention Economy
+        </a>
+      
+    </li>
+    <li class="next-article">
+      
+        <a href="/2014/03/03/prototyping-with-heroku-nordevcon-talk.html" title="Prototyping With Heroku Talk At NorDevCon - 03/03/2014">
+          <span>Next Up</span><br>Prototyping With Heroku Talk At NorDevCon
+        </a>
+      
+    </li>
+  </ul>
+</section>
+  <footer>
+    <div>
+      <p><a href="/index.html">Made by Pete</a></p>
+    </div>
+
+    <div class="right">
+      <p class="copyright">&#169; 2022 Peter Roome</p>
+    </div>
+  </footer>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>

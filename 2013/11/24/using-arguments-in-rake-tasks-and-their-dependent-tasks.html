@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<meta name="description" content="Thinking of a Product Manager, code Snippets and activities.">
+<meta name="author" content="Pete Roome - peteroo.me">
+
+<meta property="og:title" content="Pete Roome - Using arguments in Rake tasks and their dependent tasks too.">
+<meta property="og:type" content="Website">
+<meta property="og:url" content="/2013/11/24/using-arguments-in-rake-tasks-and-their-dependent-tasks.html">
+<meta property="og:site_name" content="Pete Roome">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="p:domain_verify" content="1562f4586996c850b88261bbed97966a" >
+
+    <link rel="alternate" type="application/rss+xml" title="Pete Roome" href="https://peteroome.com/feed.xml">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Pete Roome - Using arguments in Rake tasks and their dependent tasks too.</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-21402181-18");
+    pageTracker._trackPageview();
+    } catch(err) {}
+</script>
+    <header>
+      <nav>
+        <a href="/index.html" class="home" >Peter Roome</a>
+        <a href="https://twitter.com/zoltarSpeaks" target="_blank" class="twitter">@zoltarSpeaks</a>
+      </nav>
+    </header>
+
+<section class="content">
+  <article>
+    <h1><a href="/2013/11/24/using-arguments-in-rake-tasks-and-their-dependent-tasks.html">Using arguments in Rake tasks and their dependent tasks too.</a></h1>
+    <div class='meta'>
+      <h4>24/11/2013, A couple of minutes read.</h4>
+    </div>
+    
+    <p>I’m trying to slowly automate my workflow during the development of Pingle, the project i’m currently working on.</p>
+
+<p>Part of this has been the development of a Rake task that compiles and minifies Pingle’s SpineJS app, copies the new <code>application.js</code> and <code>application.css</code> files to our deploy repo and finally commits those new files to Github.</p>
+
+<p>In doing this, i quickly realised i was going to want to be able to switch the environment variables used in each compile inorder to test in a closed environment along each stage of the development process: dev, staging, production.</p>
+
+<p>This post follows on directly from my previous one that describes <a href="/2013/11/23/defining-environment-variables-for-a-spinejs-app.html" title="Defining and exposing environment variables with Hem for use in a SpineJS app">how to go about defining Environment Variables within a SpineJS app using a custom Hem compiler</a>.</p>
+
+<h2 id="custom-builds">Custom Builds</h2>
+<p>Fortunately, using the techniques i described in my previous post, it was very easy to define which environment i wanted the build of my app to use each time i compiled the project…</p>
+
+<pre><code>$ RUNTIME=staging hem build
+</code></pre>
+
+<p>or…</p>
+
+<pre><code>$ RUNTIME=production hem build
+</code></pre>
+
+<p>With this in mind, i was able to start developing my rake task.</p>
+
+<h2 id="automating-build-with-a-rake-task">Automating build with a rake task</h2>
+<p>Although, i guess this isn’t really automation like some people consider automation, it’s still removing a few steps from my build process that i’d otherwise have to type on the commandline. It’s all moving in the right direction.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span>    <span class="nb">require</span> <span class="s2">&quot;rubygems&quot;</span>
+    <span class="nb">require</span> <span class="s2">&quot;tmpdir&quot;</span>
+
+    <span class="no">PHONE_GAP_REPO</span>  <span class="o">=</span> <span class="s2">&quot;/Users/myusername/Sites/my_site/phonegap-version/&quot;</span>
+
+    <span class="n">desc</span> <span class="s2">&quot;Generate application.js and application.css&quot;</span>
+    <span class="n">task</span> <span class="ss">:build</span> <span class="k">do</span> <span class="o">|</span><span class="n">task</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
+      <span class="nb">puts</span> <span class="s2">&quot;Compiling for </span><span class="si">#{</span><span class="n">args</span><span class="o">[</span><span class="ss">:environment</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="nb">system</span> <span class="s2">&quot;RUNTIME=</span><span class="si">#{</span><span class="n">args</span><span class="o">[</span><span class="ss">:environment</span><span class="o">]</span><span class="si">}</span><span class="s2"> hem build&quot;</span>
+    <span class="k">end</span>
+
+    <span class="n">desc</span> <span class="s2">&quot;Generate and publish blog to gh-pages&quot;</span>
+    <span class="n">task</span> <span class="ss">:publish</span><span class="p">,</span> <span class="o">[</span><span class="ss">:environment</span><span class="o">]</span> <span class="o">=&gt;</span> <span class="ss">:build</span> <span class="k">do</span> <span class="o">|</span><span class="n">task</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
+      <span class="no">FileUtils</span><span class="o">.</span><span class="n">cp_r</span><span class="p">(</span><span class="no">Dir</span><span class="o">[</span><span class="s2">&quot;www&quot;</span><span class="o">]</span><span class="p">,</span> <span class="no">Dir</span><span class="o">[</span><span class="no">PHONE_GAP_REPO</span><span class="o">]</span><span class="p">)</span>
+      <span class="nb">system</span> <span class="s2">&quot;cd </span><span class="si">#{</span><span class="no">PHONE_GAP_REPO</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="nb">system</span> <span class="s2">&quot;git add .&quot;</span>
+      <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;New Build, created at </span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">utc</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="nb">system</span> <span class="s2">&quot;git commit -m </span><span class="si">#{</span><span class="n">message</span><span class="o">.</span><span class="n">inspect</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="nb">system</span> <span class="s2">&quot;git push origin master --force&quot;</span>
+    <span class="k">end</span>
+    </code></pre></figure>
+
+<p>I’ll go into a little more detail about this…</p>
+
+<h2 id="phonegap-project-sizes">Phonegap Project Sizes</h2>
+<p>Phonegap have a limit on the size of a repo that can be pulled into their remote Build tool. Slightly annoying, but i got round this by creating another repo especially for Phonegap that literally only contains my core assets, minified js and css and the index.html file and thats about it; production code if you will.</p>
+
+<p>So, in my rake task i start by defining where my production ready repo is on my machine: <code>PHONE_GAP_REPO</code>.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span>    <span class="no">PHONE_GAP_REPO</span>  <span class="o">=</span> <span class="s2">&quot;/Users/myusername/Sites/my_site/phonegap-version/&quot;</span>
+    </code></pre></figure>
+
+<h2 id="the-build-task">The Build Task</h2>
+<p>Next, is a small task that is depended on by the main task - the <code>hem build</code> aspect of my automation. This takes a RUNTIME argument to determine the variables used in the build of the project.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span>    <span class="n">desc</span> <span class="s2">&quot;Generate application.js and application.css&quot;</span>
+    <span class="n">task</span> <span class="ss">:build</span> <span class="k">do</span> <span class="o">|</span><span class="n">task</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
+      <span class="nb">puts</span> <span class="s2">&quot;Compiling for </span><span class="si">#{</span><span class="n">args</span><span class="o">[</span><span class="ss">:environment</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="nb">system</span> <span class="s2">&quot;RUNTIME=</span><span class="si">#{</span><span class="n">args</span><span class="o">[</span><span class="ss">:environment</span><span class="o">]</span><span class="si">}</span><span class="s2"> hem build&quot;</span>
+    <span class="k">end</span>
+    </code></pre></figure>
+
+<p>And finally, the <code>:publish</code> task; the task i’ll call from the command line when i’m ready to build.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span>    <span class="n">desc</span> <span class="s2">&quot;Generate and publish&quot;</span>
+    <span class="n">task</span> <span class="ss">:publish</span><span class="p">,</span> <span class="o">[</span><span class="ss">:environment</span><span class="o">]</span> <span class="o">=&gt;</span> <span class="ss">:build</span> <span class="k">do</span> <span class="o">|</span><span class="n">task</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
+      <span class="no">FileUtils</span><span class="o">.</span><span class="n">cp_r</span><span class="p">(</span><span class="no">Dir</span><span class="o">[</span><span class="s2">&quot;www&quot;</span><span class="o">]</span><span class="p">,</span> <span class="no">Dir</span><span class="o">[</span><span class="no">PHONE_GAP_REPO</span><span class="o">]</span><span class="p">)</span>
+      <span class="nb">system</span> <span class="s2">&quot;git add .&quot;</span>
+      <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;New Build, created at </span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">utc</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="nb">system</span> <span class="s2">&quot;git commit -m </span><span class="si">#{</span><span class="n">message</span><span class="o">.</span><span class="n">inspect</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="nb">system</span> <span class="s2">&quot;git push origin master --force&quot;</span>
+    <span class="k">end</span>
+    </code></pre></figure>
+
+<p>This task depends on the previous <code>:build</code> task to complete. So once that task has completed the following takes place:</p>
+
+<ol>
+  <li>
+    <p>Copy the ‘www’ directory from the repo i’m currently in, to the defined: <code>PHONE_GAP_REPO</code>.</p>
+  </li>
+  <li>
+    <p>Commit the new files to the repo i’m currently within.</p>
+  </li>
+</ol>
+
+<p>TODO:</p>
+
+<ol>
+  <li>
+    <p>Commit the new files, within the <code>PHONE_GAP_REPO</code> and push them to Github.</p>
+  </li>
+  <li>
+    <p>Develop a Github post receive hook to alert the Phonegap Build tool of the new files and to queue my app for rebuilding.</p>
+  </li>
+</ol>
+
+<h2 id="rake-task-argument-filtering">Rake task argument filtering</h2>
+<p>This rake task takes an environment as an argument for use during the build; as defined in the first line of the task: <code>task :publish, [:environment] =&gt; :build do |task, args|</code>. The way this task is defined means that any arguments passed to the main task. will also filter down into the dependent tasks too which is really smart.</p>
+
+<p>So in our build task, the definition of the task does not state any arguments but does pass them in the block it creates, because it receives the arguments i pass to the main <code>:publish</code> task. Like so: <code>task :build do |task, args|</code>.</p>
+
+<h2 id="running-the-task">Running the task</h2>
+<p>All i have to do now, once my tests pass in my development repository and i’m ready to build my Phonegap app, is run:</p>
+
+<pre><code>$ rake publish[staging]
+</code></pre>
+
+<p>or for production:</p>
+
+<pre><code>$ rake publish[production]
+</code></pre>
+
+
+    <div class="article-footer">
+      <p>by <a href="https://www.linkedin.com/in/peteroome/" title="Pete on LinkedIn">Pete Roome</a></p>
+      <p><small>Product Manager at <a href="https://www.cazoo.co.uk/?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog" title="Cazoo" target="_blank">Cazoo</a>.</small></p>
+    </div>
+
+    
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'peteroome'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </article>
+</section>
+<section class="next-previous">
+  <ul>
+    <li class="previous-article">
+      
+        <a href="/2013/11/23/defining-environment-variables-for-a-spinejs-app.html" title="Defining and exposing environment variables with Hem for use in a SpineJS app. - 23/11/2013">
+          <span>Previously</span><br>Defining and exposing environment variables with Hem for use in a SpineJS app.
+        </a>
+      
+    </li>
+    <li class="next-article">
+      
+        <a href="/2013/11/25/track-your-macs-logs-whilst-upgrading-to-mavericks.html" title="Track your Mac's logs whilst upgrading to Mavericks - 25/11/2013">
+          <span>Next Up</span><br>Track your Mac's logs whilst upgrading to Mavericks
+        </a>
+      
+    </li>
+  </ul>
+</section>
+  <footer>
+    <div>
+      <p><a href="/index.html">Made by Pete</a></p>
+    </div>
+
+    <div class="right">
+      <p class="copyright">&#169; 2022 Peter Roome</p>
+    </div>
+  </footer>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>

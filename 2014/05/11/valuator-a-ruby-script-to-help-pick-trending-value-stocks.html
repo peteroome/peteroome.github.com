@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<meta name="description" content="Thinking of a Product Manager, code Snippets and activities.">
+<meta name="author" content="Pete Roome - peteroo.me">
+
+<meta property="og:title" content="Pete Roome - Valuator - A Ruby Script To Pick A Trending Value Stock Portfolio">
+<meta property="og:type" content="Website">
+<meta property="og:url" content="/2014/05/11/valuator-a-ruby-script-to-help-pick-trending-value-stocks.html">
+<meta property="og:site_name" content="Pete Roome">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="p:domain_verify" content="1562f4586996c850b88261bbed97966a" >
+
+    <link rel="alternate" type="application/rss+xml" title="Pete Roome" href="https://peteroome.com/feed.xml">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Pete Roome - Valuator - A Ruby Script To Pick A Trending Value Stock Portfolio</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-21402181-18");
+    pageTracker._trackPageview();
+    } catch(err) {}
+</script>
+    <header>
+      <nav>
+        <a href="/index.html" class="home" >Peter Roome</a>
+        <a href="https://twitter.com/zoltarSpeaks" target="_blank" class="twitter">@zoltarSpeaks</a>
+      </nav>
+    </header>
+
+<section class="content">
+  <article>
+    <h1><a href="/2014/05/11/valuator-a-ruby-script-to-help-pick-trending-value-stocks.html">Valuator - A Ruby Script To Pick A Trending Value Stock Portfolio</a></h1>
+    <div class='meta'>
+      <h4>11/05/2014, A couple of minutes read.</h4>
+    </div>
+    
+    <p>I’ve always been curious about investing on the stock market. However, until recently i’ve neither had the knowledge, money or confidence to do so. Some of these things haven’t changed, but I have been doing a lot more reading around the subject.</p>
+
+<p><em><strong>Disclaimer:</strong> I am not and do not claim to be an expert in investing. You should always do your own, thorough and detailed research, before investing in stocks. To this date (12/05/2014), I have not used this script to pick stocks I have then followed through and invested money into.</em></p>
+
+<p>A few months back I stumbled across <a href="http://www.reddit.com/r/investing/comments/1eyx3r/how_do_you_select_stocks_contd_trending_value_see/">this Reddit thread</a>. I found it fascinating reading about the ‘program’ that SwellsInMoisture had developed and found myself reading this thread a few times over.</p>
+
+<p>Seeing a few people asking if this would be of any use as a Python script got me thinking. Then I saw the comment by nicolamr who had turned the screener into a <a href="http://finance.nmr.io/">web app</a>. However, on inspection the site didn’t seem to work. Well, it worked but I couldn’t see any data from one of the listed snapshots.</p>
+
+<p>With that being the case, I found <a href="">nicolamr’s repository on Github</a> and proceeded to convert it to Ruby. Not having really read any Python before I wasn’t sure what to expect. It turned out to be pretty straight forward though. Quite Ruby like actually. A few missing <code>end</code>’s and a couple of extra <code>;</code>’s.</p>
+
+<p>Anyway, I now have my own functioning Trending Value Stock script/screener. The script pulls data from various sources (<a href="http://finviz.com/">finviz</a> and <a href="https://uk.finance.yahoo.com/">Yahoo finance</a>), before calculating the necessary rankings indicated by O’Shaughnessy in his book: <a href="http://www.amazon.co.uk/gp/product/B005NASI8S/ref=as_li_ss_tl?ie=UTF8&amp;camp=1634&amp;creative=19450&amp;creativeASIN=B005NASI8S&amp;linkCode=as2&amp;tag=zoltarspeaks-21">‘What Works on Wall Street’</a>.</p>
+
+<h2 id="why-trending-value">Why Trending Value?</h2>
+<p><a href="http://www.forbes.com/sites/johndobosz/2011/12/13/values-to-hold-dear-when-youre-buying-stocks/">On the Forbes website</a>, O’Shaughnessy explains:</p>
+
+<blockquote>
+  <p>“if you want the best results over time, go with small cap stocks trading at lower-than-average multiples of earnings, sales and book value–and buy them when they’re trending higher. Momentum does matter as history shows that winners tend to keep on winning.”</p>
+</blockquote>
+
+<p>Our initial aim when it comes to picking our trending value stocks is to calculate a value composite. The value composite will measure undervaluation of a stock and replaces the common approach of simply using the price-to-sales ratio. It also provides us with another route towards portfolio diversitification; highly recommended when investing.</p>
+
+<p>In <a href="http://www.forbes.com/sites/johndobosz/2011/12/13/values-to-hold-dear-when-youre-buying-stocks/">a video</a>, unfortunately no-longer available on the Forbes website] (you’ll have to take my word for it), O’Shaughnessy talks about the problem with single-factor valuation ratios. He explains that they move ‘in and out of favor’ and can significantly underperform the overall market over any given 10-year period, despite their long-term outperformance.</p>
+
+<h2 id="the-value-composite">The Value Composite</h2>
+<p>Our value composite is composed of six value measures:</p>
+
+<ul>
+  <li>
+    <p><a href="http://www.investopedia.com/terms/p/price-to-bookratio.asp">Price to book value (p/b)</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.investopedia.com/terms/p/price-to-salesratio.asp">Price to sales (psr or p/s)</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.investopedia.com/terms/e/ebitda-ev-multiple.asp">Earnings before interest, taxes, depreciation and amortization (EBITDA) to Enterprise value (EV)(EV/EBITDA)</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.investopedia.com/terms/p/pricetofreecashflow.asp">Price to free cash flow</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.investopedia.com/terms/p/price-earningsrelative.asp">Price to earnings (p/e)</a></p>
+  </li>
+  <li>
+    <p><a href="http://en.wikipedia.org/wiki/Shareholder_yield">Shareholder yield</a></p>
+  </li>
+</ul>
+
+<h2 id="the-trending-value-stock-screenscript">The Trending Value Stock Screen/Script</h2>
+<p>Firstly, we shortlist all stocks with a market cap &gt; $200M.</p>
+
+<p>We then assign each stock in our universe a score of 1 to 100 for each of the aforementioned value measures, in comparison to one another. Then calculate an average score from each of these values to create an overall value composite.</p>
+
+<p>A “perfect” value stock will have a rating of 600 (or 100%)(a 100 score for each measure). However, a stock with a composite score &gt; 420 is normally a financially sound, well rounded company and undervalued too.</p>
+
+<p>The script itself does this and generates a CSV file of our entire universe at the time of running it.</p>
+
+<p>Our Trending Value Portfolio is then narrowed down to the 10% of stocks with the best average score. We sort the 10% by their trailing six-month performance (the trending part of this screen) and select the top 25 from the list.</p>
+
+<p>At present I am doing this manually so I can clearly see the results of all the calculations and be sure that no silly errors have occured. I will then manually filter the 10% in the previously mentioned manner before selecting a final shortlist of 25.</p>
+
+<h2 id="turnover">Turnover</h2>
+<p>O’Shaughnessey rebalances his portfolio annually. The cost (commission) paid on investing in a portfolio of this size will cost you a fair whack hence only rebalancing annually. With that in mind, this script should only need to be run once a year - in theory.</p>
+
+<h2 id="testing">Testing</h2>
+<p>I am testing the results of my script using one of the many stocks apps available on iOS: <a href="https://itunes.apple.com/gb/app/stocks+-alerts-real-time-stock/id667161120?mt=8">Stocks+</a>. I picked an amount I wanted to ‘virtually’ invest and split it evenly amongst the 25 shortlisted companies.</p>
+
+<p>It should also be possible to back test this script/screen using historical data. However, i’ve not gotten round to doing this yet.</p>
+
+<h2 id="download">Download</h2>
+<p>The repository for this script is on <a href="https://github.com/coolbox/valuator">Github here</a>. Feel free to report issues or submit pull requests.</p>
+
+<p>Or you can <a href="https://github.com/coolbox/valuator/archive/master.zip">download the repository as a zip</a>, right now.</p>
+
+
+    <div class="article-footer">
+      <p>by <a href="https://www.linkedin.com/in/peteroome/" title="Pete on LinkedIn">Pete Roome</a></p>
+      <p><small>Product Manager at <a href="https://www.cazoo.co.uk/?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog" title="Cazoo" target="_blank">Cazoo</a>.</small></p>
+    </div>
+
+    
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'peteroome'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </article>
+</section>
+<section class="next-previous">
+  <ul>
+    <li class="previous-article">
+      
+        <a href="/2014/04/28/sisu-your-exercise-data-as-art.html" title="Sisu - Your Exercise Data As Art - 28/04/2014">
+          <span>Previously</span><br>Sisu - Your Exercise Data As Art
+        </a>
+      
+    </li>
+    <li class="next-article">
+      
+        <a href="/2014/05/21/two-sentence-summaries.html" title="Two Sentence Summaries #1 - 21/05/2014">
+          <span>Next Up</span><br>Two Sentence Summaries #1
+        </a>
+      
+    </li>
+  </ul>
+</section>
+  <footer>
+    <div>
+      <p><a href="/index.html">Made by Pete</a></p>
+    </div>
+
+    <div class="right">
+      <p class="copyright">&#169; 2022 Peter Roome</p>
+    </div>
+  </footer>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>

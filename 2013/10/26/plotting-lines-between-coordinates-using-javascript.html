@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<meta name="description" content="Thinking of a Product Manager, code Snippets and activities.">
+<meta name="author" content="Pete Roome - peteroo.me">
+
+<meta property="og:title" content="Pete Roome - Using Javascript to plot lines between coordinates on a canvas.">
+<meta property="og:type" content="Website">
+<meta property="og:url" content="/2013/10/26/plotting-lines-between-coordinates-using-javascript.html">
+<meta property="og:site_name" content="Pete Roome">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="p:domain_verify" content="1562f4586996c850b88261bbed97966a" >
+
+    <link rel="alternate" type="application/rss+xml" title="Pete Roome" href="https://peteroome.com/feed.xml">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Pete Roome - Using Javascript to plot lines between coordinates on a canvas.</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-21402181-18");
+    pageTracker._trackPageview();
+    } catch(err) {}
+</script>
+    <header>
+      <nav>
+        <a href="/index.html" class="home" >Peter Roome</a>
+        <a href="https://twitter.com/zoltarSpeaks" target="_blank" class="twitter">@zoltarSpeaks</a>
+      </nav>
+    </header>
+
+<section class="content">
+  <article>
+    <h1><a href="/2013/10/26/plotting-lines-between-coordinates-using-javascript.html">Using Javascript to plot lines between coordinates on a canvas.</a></h1>
+    <div class='meta'>
+      <h4>26/10/2013, About a minutes read.</h4>
+    </div>
+    
+    <p>I attended <a href="http://kyan.com" title="Kyan.com">Kyan’s</a> awesome <a href="http://wxg.co.uk/" title="Web Expo Guildford">WXG</a> yesterday, in Surrey. A one day, 2 track conference catering for both designers and developers. This was its second year in operation and also the second time I’ve been. Stand out talks came from the likes of: <a href="http://seb.ly/" title="Seb Lee-Deslisle Digital Artist">Seb Lee-Delisle</a> (<a href="http://twitter.com/seb_ly">@seb_ly</a>) and <a href="http://news.jam-factory.com/" title="Gaving Strange Portfolio">Gavin Strange</a> (<a href="http://twitter.com/jamfactory">@jamfactory</a>), both of which inspired me to just tinker a bit more and publish stuff, no matter how small or insignificant; not that any of the work either of those two are doing is insignificant. One of Seb’s projects that particularly inspired me was his <a href="http://seb.ly/work/lunar-trails/" title="Lunar Trails">‘Lunar Trails’</a> project.</p>
+
+<p>Anyway, I’ve been doing a lot of thinking lately about the data I interact with on a daily basis and how various elements of it could be used to generate ‘art’, completely different to the form it was intended/designed for.</p>
+
+<p>The obvious source of data I keep getting hung up on are tweets and in particular their origins - the geolocation data.</p>
+
+<p>So my first thought was, could I create a print that was based on the origins of people’s tweets from my stream. i.e could I draw a line on an HTML canvas from one set of coordinates to another, and what would that look like.</p>
+
+<p>So I loaded up <a href="http://jsfiddle.net/" title="JSFiddle">JSfiddle</a> and had a little play. I didn’t want to get hung up on pulling in real time data from Twitter for the time being so I set about auto generating a number of random coordinates just using JavaScript - well my favourite flavour of JavaScript, CoffeeScript.</p>
+
+<p>Seemed straight forward enough…</p>
+
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span></span>    <span class="nv">genCoords = </span><span class="nf">-&gt;</span>
+      <span class="nv">coords = </span>
+        <span class="nv">x: </span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">500</span> <span class="o">+</span><span class="mi">25</span>
+        <span class="nv">y: </span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">500</span> <span class="o">+</span><span class="mi">50</span>
+      <span class="k">return</span> <span class="nx">coords</span>
+    </code></pre></figure>
+
+<p>This was based on the idea that i’d have an 700x700 canvas so i wanted all my coordinates to easily fit within that.</p>
+
+<p>I figured straight lines between points would be kind of sharp and ugly, so immediately turned my attentions to curves or arcs. As it is, it turns out drawing smooth curves from one set of x:y coordinates to another is quite hard to do and requires quite a lot of maths, so I diverted my attention to <a href="http://kineticjs.com/" title="KineticJS Framework">KineticJS</a> (this was just an experiment remember). As I hoped, Kinetic provides a far more useable method: <code>Kinetic.Spline</code>, for achieving the arc I was looking for.</p>
+
+<p>So here it is, <a href="http://jsfiddle.net/zoltarSpeaks/53wpB/4/" title="JSFiddle Example">500 random coordinates connected to one another via lines</a>…</p>
+
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span></span>    <span class="nv">stage = </span><span class="k">new</span> <span class="nx">Kinetic</span><span class="p">.</span><span class="nx">Stage</span>
+        <span class="nv">container: </span><span class="s">&#39;container&#39;</span>
+        <span class="nv">width: </span><span class="mi">600</span>
+        <span class="nv">height: </span><span class="mi">500</span>
+        
+    <span class="nv">layer = </span><span class="k">new</span> <span class="nx">Kinetic</span><span class="p">.</span><span class="nx">Layer</span><span class="p">()</span>
+    <span class="nv">splines = </span><span class="p">[]</span>
+
+    <span class="nv">genCoords = </span><span class="nf">-&gt;</span>
+      <span class="nv">coords = </span>
+        <span class="nv">x: </span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">350</span>
+        <span class="nv">y: </span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">300</span> <span class="o">+</span><span class="mi">50</span>
+      <span class="k">return</span> <span class="nx">coords</span>
+
+    <span class="nv">draw = </span><span class="nf">-&gt;</span>
+      <span class="nv">points = </span><span class="p">[]</span>
+      <span class="k">if</span> <span class="nx">firstCoords</span>
+        <span class="nx">points</span><span class="p">.</span><span class="nx">push</span> <span class="nx">firstCoords</span>
+      <span class="k">else</span>
+        <span class="nx">points</span><span class="p">.</span><span class="nx">push</span> <span class="nx">genCoords</span><span class="p">()</span>
+
+      <span class="k">for</span> <span class="nx">x</span> <span class="k">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">..</span><span class="mi">500</span><span class="p">]</span>
+        <span class="nx">do</span> <span class="nf">(x) -&gt;</span>
+          <span class="nx">points</span><span class="p">.</span><span class="nx">push</span> <span class="nx">genCoords</span><span class="p">()</span>
+          
+      <span class="nv">spline = </span><span class="k">new</span> <span class="nx">Kinetic</span><span class="p">.</span><span class="nx">Spline</span>
+        <span class="nv">x: </span><span class="mi">100</span>
+        <span class="nv">y: </span><span class="mi">50</span>
+        <span class="nv">points: </span><span class="nx">points</span>
+        <span class="nv">stroke: </span><span class="s">&#39;#fff&#39;</span>
+        <span class="nv">strokeWidth: </span><span class="mf">0.5</span>
+        <span class="nv">tension: </span><span class="mi">1</span>
+
+      <span class="nx">splines</span><span class="p">.</span><span class="nx">push</span> <span class="nx">spline</span>
+
+      <span class="nv">firstCoords = </span>
+        <span class="nv">x: </span><span class="nx">points</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">x</span>
+        <span class="nv">y: </span><span class="nx">points</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">y</span>
+
+      <span class="c1"># Add to layer</span>
+      <span class="nx">layer</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">spline</span><span class="p">)</span>
+      <span class="nx">stage</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">layer</span><span class="p">)</span>
+
+    <span class="nx">draw</span><span class="p">()</span>
+    </code></pre></figure>
+
+<p>And a couple of examples of what it looks like…</p>
+
+<p><img src="/images/A-Beautiful-Mess.png" alt="A Beautiful Mess" title="A Beautiful Mess" />
+<img src="/images/A-Beautiful-Mess-Black.png" alt="A Beautiful Black Mess" title="A Beautiful Black Mess" /></p>
+
+<p>Now, it looks like a bit of a mess but i love the fact that the whole thing is focused around this 700x700 frame i’ve created for it, even though a lot of the lines escape the boundaries.</p>
+
+<p>Next step for this experiment will be to pull in some real coordinates. Watch this space…</p>
+
+
+    <div class="article-footer">
+      <p>by <a href="https://www.linkedin.com/in/peteroome/" title="Pete on LinkedIn">Pete Roome</a></p>
+      <p><small>Product Manager at <a href="https://www.cazoo.co.uk/?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog" title="Cazoo" target="_blank">Cazoo</a>.</small></p>
+    </div>
+
+    
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'peteroome'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </article>
+</section>
+<section class="next-previous">
+  <ul>
+    <li class="previous-article">
+      
+        <a href="/2013/10/20/killing-foreman-workers-locall.html" title="Killing Foreman Workers Locally on OS X. - 20/10/2013">
+          <span>Previously</span><br>Killing Foreman Workers Locally on OS X.
+        </a>
+      
+    </li>
+    <li class="next-article">
+      
+        <a href="/2013/10/27/a-note-on-successful-people.html" title="A note about successful people - 27/10/2013">
+          <span>Next Up</span><br>A note about successful people
+        </a>
+      
+    </li>
+  </ul>
+</section>
+  <footer>
+    <div>
+      <p><a href="/index.html">Made by Pete</a></p>
+    </div>
+
+    <div class="right">
+      <p class="copyright">&#169; 2022 Peter Roome</p>
+    </div>
+  </footer>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>

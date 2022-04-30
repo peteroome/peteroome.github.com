@@ -1,0 +1,212 @@
+header,
+footer
+  background: #eb6746
+  padding: 12px 0
+
+header
+  margin: 0 0 30px
+
+  nav
+    width: 80%
+    margin: 0 auto
+    position: relative
+
+    a
+      color: white
+
+      &.home
+        color: white
+        font-size: 1em
+
+      &.twitter
+          position: absolute
+          right: 0
+          top: 0
+
+section
+  &.content
+    min-height: 100%
+    height: auto !important
+    height: 100%
+    margin: 0 auto -4em
+    width: 80%
+    max-width: 850px
+    padding-bottom: 60px   /* Height of the footer */
+
+  &.next-previous
+    margin-top: 50px
+
+    ul
+      li
+        display: block
+        width: 100%
+        height: 180px
+
+        a
+          background: $orange
+          font-size: 1.3em
+          color: #fff
+          display: block
+          padding: 4% 8%
+          line-height: 140%
+          height: 100%
+
+          span
+            font-size: 60%
+            line-height: 200%
+            text-transform: uppercase
+
+          &:hover
+            background: #fff
+            color: $blue
+
+  article
+    blockquote
+      border-left: 1px solid #ccc
+      font-style: italic
+      padding: 0 20px
+      margin: 40px 20px
+      font-size: 120%
+
+    ul
+      list-style: disc
+      margin: 0 0 10px 10px
+
+      li
+        margin-bottom: 12px
+        line-height: 135%
+
+    ol
+      margin: 0 0 10px 10px
+
+      li
+        list-style: decimal
+        font-weight: normal
+        line-height: 145%
+
+    .article-footer
+      border-top: 1px solid #ccc
+      margin: 60px 0
+      padding: 20px 0
+      font-size: 0.95em
+
+      p
+        margin: 0 0 0
+
+  small
+    font-size: 90%
+  i
+    font-style: italic
+
+img
+  margin: 0 auto;
+  max-width: 100%;
+  display: block;
+
+.embed-container
+  margin: 0 auto 15px
+  max-width: 100%
+
+iframe.instagram-media,
+iframe#mapmyfitness_route
+  margin: 0 0 30px !important
+
+ul.index
+  li
+    margin: 0 0 40px
+
+    img.postHeader
+      margin: 0 0 20px
+
+img.postHeader
+  max-width: 100%
+  margin: 0 0 20px
+
+.meta
+  margin: 0 0 20px
+
+
+footer
+  height: 4em
+
+  padding-left: 10%
+  padding-right: 10%
+  font-size: 0.8em
+
+  div
+    display: inline-block
+    width: 49%
+
+    &.right
+      text-align: right;
+
+  p
+    margin: 0
+
+  p, a
+    color: $white
+
+
+// Media queries
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px)
+  section
+    &.next-previous
+      margin-top: 100px
+
+      ul
+        width: 100%
+        display: table
+
+        li
+          display: table-cell
+          vertical-align: top
+          width: 50%
+
+          a
+            padding: 4% 6%
+
+            span
+              font-size: 60%
+              line-height: 200%
+
+          &.previous-article
+            a
+              text-align: right
+
+          &.next-article
+            a
+              text-align: left
+
+@media only screen and (min-width: 768px)
+  header
+    margin: 0 0 50px
+
+    nav
+      a.home
+        font-size: 1.4em
+
+      a.twitter
+        top: 4px
+
+  section
+
+    article
+      ul, ol
+        margin: 0 0 20px 22px
+
+    &.next-previous
+      ul
+        li
+          a
+            padding: 4% 2%
+            font-size: 1.5em
+
+  ul.index
+    li
+      margin: 0 0 60px
+
+  footer
+    div
+      width: 49.5%
