@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Using Javascript to plot lines between coordinates on a canvas.
+redirect_from:
+  - /2013/10/26/plotting-lines-between-coordinates-using-javascript.html
 ---
 
 I attended [Kyan's](http://kyan.com "Kyan.com") awesome [WXG](http://wxg.co.uk/ "Web Expo Guildford") yesterday, in Surrey. A one day, 2 track conference catering for both designers and developers. This was its second year in operation and also the second time I've been. Stand out talks came from the likes of: [Seb Lee-Delisle](http://seb.ly/ "Seb Lee-Deslisle Digital Artist") ([@seb_ly](http://twitter.com/seb_ly)) and [Gavin Strange](http://news.jam-factory.com/ "Gaving Strange Portfolio") ([@jamfactory](http://twitter.com/jamfactory)), both of which inspired me to just tinker a bit more and publish stuff, no matter how small or insignificant; not that any of the work either of those two are doing is insignificant. One of Seb's projects that particularly inspired me was his ['Lunar Trails'](http://seb.ly/work/lunar-trails/ "Lunar Trails") project.

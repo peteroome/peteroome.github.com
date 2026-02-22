@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: A Christmas Gift List Built With Sinatra, Mongoid and hosted on Heroku.
+redirect_from:
+  - /2013/10/20/a-christmas-giftlist-built-with-sinatra.html
 ---
 
 It's getting to that time of the year again when parents, family and girlfriends start demanding gift lists in order to remain organised and prevent themselves from having to do any last minute shopping.

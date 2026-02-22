@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: The Biggest Mistake I've Made During My 5 Years As A Business Owner
+redirect_from:
+  - /2014/09/17/the-biggest-mistakes-ive-made-during-my-five-years-as-a-business-owner.html
 ---
 
 I've just spent a week in Kefalonia, Greece. I was visiting for a friends wedding. During my stay I read two books that i'd been meaning to read for a few years now. The first was [Tim Ferriss' - The Four Hour Work Week](http://amzn.to/1BQQdOS). The second was [The E-Myth by Michael Gerber](http://amzn.to/1BQQiSu).

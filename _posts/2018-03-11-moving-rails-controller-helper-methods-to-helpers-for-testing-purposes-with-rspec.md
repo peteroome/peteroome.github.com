@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Moving Rails controller helper_methods to helpers for testing purposes with Rspec
+redirect_from:
+  - /2018/03/11/moving-rails-controller-helper-methods-to-helpers-for-testing-purposes-with-rspec.html
 ---
 
 A Rails architecture thing that I picked up this week…

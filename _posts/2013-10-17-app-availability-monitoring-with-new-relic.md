@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: App availability monitoring with New Relic (and how to stop your Heroku app from falling asleep)
+redirect_from:
+  - /2013/10/17/app-availability-monitoring-with-new-relic.html
 ---
 
 Whilst working on a number of sites at [PANDR](http://wearepandr.com "PANDR Web Design and Development"), using [Heroku](http://heroku.com "Heroku Cloud Hosting"), i would often find applications would 'go to sleep'. As a result they would then take anything up to ~10s to respond to the first call that hit them. 

@@ -1,0 +1,18 @@
+{% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "Pete Roome",
+    "url": "https://www.linkedin.com/in/peteroome/"
+  },
+  "description": {% if page.description %}{{ page.description | jsonify }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 | jsonify }}{% else %}{{ site.description | jsonify }}{% endif %},
+  "url": "{{ site.url }}{{ page.url }}"
+}
+</script>
+{% endif %}

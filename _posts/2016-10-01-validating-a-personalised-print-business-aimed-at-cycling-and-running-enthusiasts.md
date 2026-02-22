@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Validating my Personalised Print Business Aimed At Cycling And Running Enthusiasts.
+redirect_from:
+  - /2016/10/01/validating-a-personalised-print-business-aimed-at-cycling-and-running-enthusiasts.html
 ---
 
 This post was initially written for [Reddit](https://www.reddit.com/r/Entrepreneur/comments/56ndj5/validating_my_personalised_print_business_focused/), but I figured other non-Reddit folk might be interested in feeding back too.

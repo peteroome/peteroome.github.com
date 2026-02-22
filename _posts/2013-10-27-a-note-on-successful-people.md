@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: A note about successful people
+redirect_from:
+  - /2013/10/27/a-note-on-successful-people.html
 ---
 
 Since moving to London 6 weeks ago, I've been attending a lot of meetups, networking events and conferences; everything from [Silicon Drinkabout](http://silicondrinkabout.com/london "Silicon Drinkabout") to [WXG](http://wxg.co.uk/ "Web Expo Guildford") last week in Guildford. And there is one thing that stands out head and shoulders above anything else i've taken away from these events…

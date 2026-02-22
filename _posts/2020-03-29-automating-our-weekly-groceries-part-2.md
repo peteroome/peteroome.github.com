@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Automating my family’s grocery shopping to reduce costs and waste - Part 2
+redirect_from:
+  - /2020/03/29/automating-our-weekly-groceries-part-2.html
 ---
 
 [So it’s been almost a month since my first post](https://www.peteroome.com/2020/02/29/automating-our-weekly-groceries-version-1.html) about how I am automating my family’s grocery shopping - and a lot has changed in the world. Here we are, comfortably isolated at home, practicing the art of social distancing.

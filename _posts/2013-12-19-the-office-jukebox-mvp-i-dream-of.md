@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: The Office Jukebox MVP I Dream Of
+redirect_from:
+  - /2013/12/19/the-office-jukebox-mvp-i-dream-of.html
 ---
 
 Music in an office, especially a shared space, is often a contentious issue. Everyone has different tastes, people are sensitive to feeling different emotions on a daily, no wait, hourly basis and therefore will often contradict their own tastes on a regular basis. Often people are on the phone, or developers need to concentrate without distraction and don't forget, once a week Friday comes around and it's time to gear up for the weekend. There's a multitude of variables affecting the type of music that's loaded onto those naff portable speakers in the corner of the studio. Hmmmm can you tell i've already drifted into more of rant about my own personal experiences than sticking with the general tone i started this post with.

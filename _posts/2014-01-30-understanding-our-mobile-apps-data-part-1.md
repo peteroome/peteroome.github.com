@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Understanding Our Mobile App's Data (Part 1)
+redirect_from:
+  - /2014/01/30/understanding-our-mobile-apps-data-part-1.html
 ---
 
 We’re approximately 4 months into the development of [Pingle](http://joinpingle.com) and 1 month of it being available in the Google Play store. As a result, I wanted to share with you the data we’ve captured so far. This is the data currently driving our design and development decisions with regards to changes, updates and features.

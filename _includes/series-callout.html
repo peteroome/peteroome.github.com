@@ -1,0 +1,20 @@
+{% for s in site.data.series %}
+{% assign series_posts = site.posts | where: "series", s.id | sort: "date" %}
+{% assign published = series_posts | size %}
+{% if published > 0 %}
+<section class="series-callout">
+  <div class="sc-top">
+    <div class="sc-dot"></div>
+    <div class="sc-label">Current Series</div>
+  </div>
+  <h2>{{ s.title }}</h2>
+  <p>{{ s.description }}</p>
+  <div class="series-progress">
+    {% for i in (1..s.total) %}
+    <div class="seg{% if i <= published %} done{% endif %}"></div>
+    {% endfor %}
+  </div>
+  <div class="series-progress-meta">{{ published }} of {{ s.total }} published</div>
+</section>
+{% endif %}
+{% endfor %}

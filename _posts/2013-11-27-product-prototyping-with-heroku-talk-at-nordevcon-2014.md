@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: My 'Product prototyping with Heroku' talk at nor(DEV):con 2014
+redirect_from:
+  - /2013/11/27/product-prototyping-with-heroku-talk-at-nordevcon-2014.html
 ---
 
 I will be speaking at next years (2014) [nor(DEV):con](http://nordevcon.com/#pete_roome) (Norfolk Developers Agile and tech conference).

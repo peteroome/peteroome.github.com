@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Free User Generated Marketing Automation For Your Startup
+redirect_from:
+  - /2016/05/25/marketing-automation-for-your-startup.html
 ---
 
 When it comes to marketing automation for your startup, you've got no excuses. There are an abundance of tools out there to help. This guide will detail a simple, 4 step approach used at [Sisu](http://madewithsisu.com) to automate our weekly newsletter. The aim of the email is to surface shareable content that our users want to read. Content that draws them to our brand and makes them believe that we're experts in our field.

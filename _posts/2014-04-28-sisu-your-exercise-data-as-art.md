@@ -1,8 +1,8 @@
 ---
-layout: post
-comments: true
 title: Sisu - Your Exercise Data As Art
 image: /images/2014-04-28-sisu-your-exercise-data-as-art/sisu-matt-hamm-set.png
+redirect_from:
+  - /2014/04/28/sisu-your-exercise-data-as-art.html
 ---
 
 So we've been a little quiet of late. The reason? We've been working on a new project called [Sisu](https://www.madewithsisu.com), but more by chance and good fortune than by design.

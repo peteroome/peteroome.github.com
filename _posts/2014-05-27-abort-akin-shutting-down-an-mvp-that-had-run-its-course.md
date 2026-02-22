@@ -1,8 +1,8 @@
 ---
-layout: post
-comments: true
 title: Abort Akin - Shutting Down An MVP That Has Run It's Course
 image: /images/2014-05-27-abort-akin-shutting-down-an-mvp-that-had-run-its-course/akin-header.png
+redirect_from:
+  - /2014/05/27/abort-akin-shutting-down-an-mvp-that-had-run-its-course.html
 ---
 
 There comes a time (often more than one) in every MVP's life when it's issued with a live or die [pollice verso](http://en.wikipedia.org/wiki/Pollice_verso).

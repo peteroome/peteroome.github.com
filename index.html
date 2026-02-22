@@ -1,21 +1,44 @@
 ---
 layout: default
-title: Code Snippets and such like.
+title: Writing about building products with AI, from the inside.
 ---
 
-<ul class='index'>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Writing about building products with <span class="gradient-text">AI, from the inside</span></h1>
+    <p>I'm a startup CTO building AI-native tools for automotive parts procurement at Carpata. These are notes from the trenches -- what works, what doesn't, and what I'm still figuring out.</p>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+{% include series-callout.html %}
+
+<section class="posts-section">
+  <div class="section-label">All Posts</div>
   {% for post in paginator.posts %}
-    <li>
-      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-      <div class='meta'>
-        <h4>{{ post.date | date: "%d/%m/%Y" }}, {{ post.content | reading_length }}</h4>
+  <a href="{{ post.url }}" class="post-row">
+    <div class="fingerprint-slot">
+      <canvas class="noise-swatch" data-title="{{ post.title }}" width="112" height="112" style="width:56px;height:56px;border-radius:10px;display:block;"></canvas>
+    </div>
+    <div class="post-content">
+      <div class="post-title">{{ post.title }}</div>
+      <div class="post-meta">
+        {% if post.series %}
+        {% assign si = site.data.series | where: "id", post.series | first %}
+        <span class="post-tag">{{ si.title }}</span>
+        <span class="meta-dot"></span>
+        {% endif %}
+        <span class="post-date">{{ post.date | date: "%-d %b %Y" }}</span>
+        <span class="meta-dot"></span>
+        {% assign w = post.content | number_of_words %}
+        {% assign m = w | divided_by: 200 %}
+        {% if m < 1 %}{% assign m = 1 %}{% endif %}
+        <span class="post-read-time">{{ m }} min read</span>
       </div>
-      {% if post.image %}
-        <a href="{{ post.url }}" title="Read: {{ post.title }}"><img class="postHeader" src="{{ post.image }}" /></a>
-      {% endif %}
-      {{ post.excerpt }}
-    </li>
+    </div>
+  </a>
   {% endfor %}
-</ul>
+</section>
 
 {% include pagination.html %}

@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Meetings For Good
+redirect_from:
+  - /2013/12/09/meetings-for-good.html
 ---
 
 I’ve found myself enjoying meetings recently…

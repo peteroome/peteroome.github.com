@@ -1,0 +1,186 @@
+/* ============================================================
+   SYNTAX HIGHLIGHTING (Rouge/Pygments dark theme)
+   ============================================================ */
+
+/* Highlight wrapper (Jekyll wraps code in .highlight > pre > code) */
+.highlight {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+.highlight pre {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 1.5rem;
+}
+.highlight code {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Line numbers */
+.highlight .lineno {
+  color: var(--text-dim);
+  opacity: 0.5;
+  padding-right: 1rem;
+  user-select: none;
+}
+
+/* Keywords → green accent */
+.highlight .k,
+.highlight .kd,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt,
+.highlight .kn,
+.highlight .kc,
+.highlight .kv {
+  color: var(--accent);
+}
+
+/* Strings → yellow accent */
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .dl {
+  color: var(--accent-yellow);
+}
+
+/* Names/functions → teal accent */
+.highlight .nf,
+.highlight .nc,
+.highlight .nd,
+.highlight .ni,
+.highlight .ne,
+.highlight .nn,
+.highlight .nt,
+.highlight .nb,
+.highlight .bp {
+  color: var(--accent-teal);
+}
+
+/* Comments → dim */
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cp,
+.highlight .cs,
+.highlight .ch {
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* Numbers → purple */
+.highlight .m,
+.highlight .mi,
+.highlight .mf,
+.highlight .mh,
+.highlight .mo,
+.highlight .mb,
+.highlight .mx,
+.highlight .il {
+  color: #a78bfa;
+}
+
+/* Operators → text */
+.highlight .o,
+.highlight .ow {
+  color: var(--text);
+}
+
+/* Punctuation → secondary */
+.highlight .p {
+  color: var(--text-secondary);
+}
+
+/* Variables → text */
+.highlight .nv,
+.highlight .vi,
+.highlight .vg,
+.highlight .vc {
+  color: var(--text);
+}
+
+/* Errors → red */
+.highlight .err {
+  color: #ef4444;
+}
+
+/* Generic diff */
+.highlight .gd {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+.highlight .gi {
+  color: var(--accent);
+  background: rgba(74, 222, 128, 0.1);
+}
+.highlight .ge {
+  font-style: italic;
+}
+.highlight .gs {
+  font-weight: 700;
+}
+
+/* Generic heading/subheading */
+.highlight .gh {
+  color: var(--text);
+  font-weight: 700;
+}
+.highlight .gu {
+  color: var(--accent-teal);
+  font-weight: 700;
+}
+
+/* Prompt */
+.highlight .gp {
+  color: var(--text-dim);
+  font-weight: 700;
+}
+
+/* Output */
+.highlight .go {
+  color: var(--text-dim);
+}
+
+/* Traceback */
+.highlight .gt {
+  color: #ef4444;
+}
+
+/* Name attributes */
+.highlight .na {
+  color: var(--accent-teal);
+}
+
+/* Name labels */
+.highlight .nl {
+  color: var(--accent);
+}
+
+/* Name entity */
+.highlight .ni {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Text whitespace */
+.highlight .w {
+  color: var(--text-dim);
+}

@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: 'World Cup 2014 Office Sweepstake Ruby Script'
+redirect_from:
+  - /2014/06/12/world-cup-2014-office-sweepstake-ruby-script.html
 ---
 
 Well it would have been rude not to wouldn't it?

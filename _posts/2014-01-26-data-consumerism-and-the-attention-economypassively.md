@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Data Consumerism and the Attention Economy
+redirect_from:
+  - /2014/01/26/data-consumerism-and-the-attention-economypassively.html
 ---
 
 We consume a LOT! Everyday, we’re devouring as much as we can get our hands on; most of us more than 3 times a day. We’re at it constantly: in the privacy of our own home, some of us in the bedroom, a lot of us socially too - at the pub, whilst on a walk with our families or more likely in my case whilst cycling with friends.

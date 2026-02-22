@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Killing Foreman Workers Locally on OS X.
+redirect_from:
+  - /2013/10/20/killing-foreman-workers-locall.html
 ---
 
 I was in a situation the other day where i used ctrl+c (OS X) to kill my local [Foreman](https://github.com/ddollar/foreman "Foreman - Manage Procfile-based application") server. However, not all of the workers intiated by [Puma](http://puma.io/ "Puma Server") had been killed, preventing me from firing up another project on the same port.

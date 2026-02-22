@@ -1,8 +1,8 @@
 ---
-layout: post
-comments: true
 title: Botty - The web through the eyes of a Googlebot
 image: /images/botty/post-header.png
+redirect_from:
+  - /2015/04/05/botty-the-web-through-the-eyes-of-a-google-bot copy.html
 ---
 
 Previous to [Botty](https://chrome.google.com/webstore/detail/botty-through-the-eyes-of/ecjekiaiphcnmloaiadoeendpnlaldfc), I'd never built a Chrome Extension before. However, I was inspiried after being tipped off with some information. A colleague of mine had mentioned that it was possible to access paywall content on the [Financial Times website](http://www.ft.com/home/uk), if you changed your browsers User Agent to be a Googlebot. A simple hack that seemed easy to implement. 

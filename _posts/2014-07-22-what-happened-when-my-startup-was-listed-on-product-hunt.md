@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: What it's like to be listed on Product Hunt, twice.
+redirect_from:
+  - /2014/07/22/what-happened-when-my-startup-was-listed-on-product-hunt.html
 ---
 
 I've built two products in the last few months that were both listed on Product Hunt. [Sisu](http://madewithsisu.com/?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog), picked up by [Grégoire Gilbert (@gregoiregilbert)](http://twitter.com/gregoiregilbert) and I was responsible for posting [Flipshop](http://flipshop.io/?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog), after clearing it with the Product Hunt crew.

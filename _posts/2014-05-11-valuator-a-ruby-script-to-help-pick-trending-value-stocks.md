@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Valuator - A Ruby Script To Pick A Trending Value Stock Portfolio
+redirect_from:
+  - /2014/05/11/valuator-a-ruby-script-to-help-pick-trending-value-stocks.html
 ---
 
 I've always been curious about investing on the stock market. However, until recently i've neither had the knowledge, money or confidence to do so. Some of these things haven't changed, but I have been doing a lot more reading around the subject.    

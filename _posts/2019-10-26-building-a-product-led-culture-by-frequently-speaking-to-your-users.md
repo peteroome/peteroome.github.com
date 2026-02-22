@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Building a product-led culture by frequently  speaking to your users
+redirect_from:
+  - /2019/10/26/building-a-product-led-culture-by-frequently-speaking-to-your-users.html
 ---
 
 One of the first lessons you learn as a product manager is to build the right solution, you first need to speak to the people who are experiencing the problem you are solving.
