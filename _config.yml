@@ -9,6 +9,7 @@ author:
   title: CTO at Carpata
   bio: "CTO at Carpata. Building AI-native tools for automotive parts procurement. Writing about what works and what doesn't in AI-native product development."
   linkedin: https://www.linkedin.com/in/peteroome/
+  github: https://github.com/peteroome
 
 permalink: /:year/:month/:day/:title/
 paginate: 5

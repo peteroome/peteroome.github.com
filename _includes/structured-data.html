@@ -9,10 +9,62 @@
   "author": {
     "@type": "Person",
     "name": "Pete Roome",
-    "url": "https://www.linkedin.com/in/peteroome/"
+    "url": "{{ site.url }}/about/",
+    "sameAs": [
+      "https://www.linkedin.com/in/peteroome/",
+      "https://github.com/peteroome"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Pete Roome",
+    "url": "{{ site.url }}"
   },
   "description": {% if page.description %}{{ page.description | jsonify }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 | jsonify }}{% else %}{{ site.description | jsonify }}{% endif %},
-  "url": "{{ site.url }}{{ page.url }}"
+  "url": "{{ site.url }}{{ page.url }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  }
+}
+</script>
+{% elsif page.url == '/' or page.url == '/index.html' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.name | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "url": "{{ site.url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Pete Roome",
+    "url": "{{ site.url }}/about/",
+    "sameAs": [
+      "https://www.linkedin.com/in/peteroome/",
+      "https://github.com/peteroome"
+    ]
+  }
+}
+</script>
+{% elsif page.url == '/about/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pete Roome",
+  "url": "{{ site.url }}/about/",
+  "jobTitle": "CTO",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Carpata",
+    "url": "https://carpata.com"
+  },
+  "description": {{ page.description | jsonify }},
+  "sameAs": [
+    "https://www.linkedin.com/in/peteroome/",
+    "https://github.com/peteroome"
+  ]
 }
 </script>
 {% endif %}

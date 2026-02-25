@@ -1,5 +1,5 @@
-(function() {
-  'use strict';
+(function () {
+  "use strict";
 
   // ===== DETERMINISTIC HASH =====
   function hashString(str) {
@@ -18,7 +18,7 @@
   }
 
   function hashFloat(title, index) {
-    var h = hashString(title + ':' + index);
+    var h = hashString(title + ":" + index);
     return ((h[0] ^ h[1]) >>> 0) / 4294967296;
   }
 
@@ -26,13 +26,12 @@
     return Math.floor(hashFloat(title, index) * max);
   }
 
-
   // ===== RENDER NOISE SWATCH =====
   function renderNoiseSwatch(canvas) {
-    var title = canvas.getAttribute('data-title');
+    var title = canvas.getAttribute("data-title");
     if (!title) return;
 
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
     var w = canvas.width;
     var h = canvas.height;
 
@@ -42,16 +41,16 @@
 
     // Gradient direction
     var angle = hashFloat(title, 2) * Math.PI * 2;
-    var gx1 = w / 2 + Math.cos(angle) * w / 2;
-    var gy1 = h / 2 + Math.sin(angle) * h / 2;
-    var gx2 = w / 2 - Math.cos(angle) * w / 2;
-    var gy2 = h / 2 - Math.sin(angle) * h / 2;
+    var gx1 = w / 2 + (Math.cos(angle) * w) / 2;
+    var gy1 = h / 2 + (Math.sin(angle) * h) / 2;
+    var gx2 = w / 2 - (Math.cos(angle) * w) / 2;
+    var gy2 = h / 2 - (Math.sin(angle) * h) / 2;
 
     // Rich base gradient
     var grad = ctx.createLinearGradient(gx1, gy1, gx2, gy2);
-    grad.addColorStop(0, 'hsla(' + hue1 + ', 58%, 23%, 1)');
-    grad.addColorStop(0.5, 'hsla(' + ((hue1 + hue2) / 2) + ', 50%, 18%, 1)');
-    grad.addColorStop(1, 'hsla(' + hue2 + ', 45%, 14%, 1)');
+    grad.addColorStop(0, "hsla(" + hue1 + ", 58%, 23%, 1)");
+    grad.addColorStop(0.5, "hsla(" + (hue1 + hue2) / 2 + ", 50%, 18%, 1)");
+    grad.addColorStop(1, "hsla(" + hue2 + ", 45%, 14%, 1)");
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, w, h);
 
@@ -82,24 +81,30 @@
     ctx.putImageData(imageData, 0, 0);
 
     // Soft vignette
-    var vig = ctx.createRadialGradient(w / 2, h / 2, w * 0.15, w / 2, h / 2, w * 0.65);
-    vig.addColorStop(0, 'rgba(0,0,0,0)');
-    vig.addColorStop(1, 'rgba(0,0,0,0.25)');
+    var vig = ctx.createRadialGradient(
+      w / 2,
+      h / 2,
+      w * 0.15,
+      w / 2,
+      h / 2,
+      w * 0.65,
+    );
+    vig.addColorStop(0, "rgba(0,0,0,0)");
+    vig.addColorStop(1, "rgba(0,0,0,0.25)");
     ctx.fillStyle = vig;
     ctx.fillRect(0, 0, w, h);
 
     // Subtle inner border
-    canvas.style.boxShadow = 'inset 0 0 0 1px rgba(255,255,255,0.06)';
+    canvas.style.boxShadow = "inset 0 0 0 1px rgba(255,255,255,0.06)";
   }
-
 
   // ===== RENDER ARTICLE HERO =====
   function renderArticleHero() {
-    var hero = document.getElementById('article-hero');
-    var canvas = document.getElementById('article-hero-canvas');
+    var hero = document.getElementById("article-hero");
+    var canvas = document.getElementById("article-hero-canvas");
     if (!canvas || !hero) return;
 
-    var title = canvas.getAttribute('data-title');
+    var title = canvas.getAttribute("data-title");
     if (!title) return;
 
     var rect = hero.getBoundingClientRect();
@@ -109,15 +114,15 @@
 
     canvas.width = w * scale;
     canvas.height = h * scale;
-    canvas.style.width = w + 'px';
-    canvas.style.height = h + 'px';
+    canvas.style.width = w + "px";
+    canvas.style.height = h + "px";
 
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
     var cw = canvas.width;
     var ch = canvas.height;
 
     // Background: dark base
-    ctx.fillStyle = '#0a0a0a';
+    ctx.fillStyle = "#0a0a0a";
     ctx.fillRect(0, 0, cw, ch);
 
     // Subtle noise texture
@@ -154,10 +159,14 @@
 
       function edgePoint(edge, t) {
         switch (edge) {
-          case 0: return [pad + t * (cw - pad * 2), pad];
-          case 1: return [cw - pad, pad + t * (ch - pad * 2)];
-          case 2: return [pad + t * (cw - pad * 2), ch - pad];
-          case 3: return [pad, pad + t * (ch - pad * 2)];
+          case 0:
+            return [pad + t * (cw - pad * 2), pad];
+          case 1:
+            return [cw - pad, pad + t * (ch - pad * 2)];
+          case 2:
+            return [pad + t * (cw - pad * 2), ch - pad];
+          case 3:
+            return [pad, pad + t * (ch - pad * 2)];
         }
       }
 
@@ -170,12 +179,14 @@
       var spreadY = (ch - pad * 2) * 0.45;
 
       return {
-        sx: sp[0], sy: sp[1],
+        sx: sp[0],
+        sy: sp[1],
         cx1: mx + (hashFloat(title, hashOffset + 4) - 0.5) * spreadX,
         cy1: my + (hashFloat(title, hashOffset + 5) - 0.5) * spreadY,
         cx2: mx + (hashFloat(title, hashOffset + 6) - 0.5) * spreadX,
         cy2: my + (hashFloat(title, hashOffset + 7) - 0.5) * spreadY,
-        ex: ep[0], ey: ep[1]
+        ex: ep[0],
+        ey: ep[1],
       };
     }
 
@@ -184,31 +195,54 @@
     var comp2 = generateCurve(30);
 
     // Radial glow at the apex of the main curve
-    var apexX = 0.125 * main.sx + 0.375 * main.cx1 + 0.375 * main.cx2 + 0.125 * main.ex;
-    var apexY = 0.125 * main.sy + 0.375 * main.cy1 + 0.375 * main.cy2 + 0.125 * main.ey;
+    var apexX =
+      0.125 * main.sx + 0.375 * main.cx1 + 0.375 * main.cx2 + 0.125 * main.ex;
+    var apexY =
+      0.125 * main.sy + 0.375 * main.cy1 + 0.375 * main.cy2 + 0.125 * main.ey;
 
     var glowRadius = Math.min(cw, ch) * 0.45;
-    var glow = ctx.createRadialGradient(apexX, apexY, 0, apexX, apexY, glowRadius);
-    glow.addColorStop(0, 'rgba(74, 222, 128, 0.06)');
-    glow.addColorStop(0.4, 'rgba(74, 222, 128, 0.03)');
-    glow.addColorStop(1, 'rgba(74, 222, 128, 0)');
+    var glow = ctx.createRadialGradient(
+      apexX,
+      apexY,
+      0,
+      apexX,
+      apexY,
+      glowRadius,
+    );
+    glow.addColorStop(0, "rgba(74, 222, 128, 0.06)");
+    glow.addColorStop(0.4, "rgba(74, 222, 128, 0.03)");
+    glow.addColorStop(1, "rgba(74, 222, 128, 0)");
     ctx.fillStyle = glow;
     ctx.fillRect(0, 0, cw, ch);
 
     // Draw companion curves
-    ctx.lineCap = 'round';
+    ctx.lineCap = "round";
 
     ctx.beginPath();
     ctx.moveTo(comp1.sx, comp1.sy);
-    ctx.bezierCurveTo(comp1.cx1, comp1.cy1, comp1.cx2, comp1.cy2, comp1.ex, comp1.ey);
-    ctx.strokeStyle = 'rgba(74, 222, 128, 0.06)';
+    ctx.bezierCurveTo(
+      comp1.cx1,
+      comp1.cy1,
+      comp1.cx2,
+      comp1.cy2,
+      comp1.ex,
+      comp1.ey,
+    );
+    ctx.strokeStyle = "rgba(74, 222, 128, 0.06)";
     ctx.lineWidth = 1.5 * scale;
     ctx.stroke();
 
     ctx.beginPath();
     ctx.moveTo(comp2.sx, comp2.sy);
-    ctx.bezierCurveTo(comp2.cx1, comp2.cy1, comp2.cx2, comp2.cy2, comp2.ex, comp2.ey);
-    ctx.strokeStyle = 'rgba(74, 222, 128, 0.05)';
+    ctx.bezierCurveTo(
+      comp2.cx1,
+      comp2.cy1,
+      comp2.cx2,
+      comp2.cy2,
+      comp2.ex,
+      comp2.ey,
+    );
+    ctx.strokeStyle = "rgba(74, 222, 128, 0.05)";
     ctx.lineWidth = 1 * scale;
     ctx.stroke();
 
@@ -216,7 +250,7 @@
     ctx.beginPath();
     ctx.moveTo(main.sx, main.sy);
     ctx.bezierCurveTo(main.cx1, main.cy1, main.cx2, main.cy2, main.ex, main.ey);
-    ctx.strokeStyle = 'rgba(74, 222, 128, 0.12)';
+    ctx.strokeStyle = "rgba(74, 222, 128, 0.12)";
     ctx.lineWidth = 3 * scale;
     ctx.stroke();
 
@@ -224,27 +258,60 @@
     ctx.beginPath();
     ctx.moveTo(main.sx, main.sy);
     ctx.bezierCurveTo(main.cx1, main.cy1, main.cx2, main.cy2, main.ex, main.ey);
-    ctx.strokeStyle = 'rgba(74, 222, 128, 0.06)';
+    ctx.strokeStyle = "rgba(74, 222, 128, 0.06)";
     ctx.lineWidth = 6 * scale;
     ctx.stroke();
 
     // End dot
     ctx.beginPath();
     ctx.arc(main.ex, main.ey, 4 * scale, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(74, 222, 128, 0.18)';
+    ctx.fillStyle = "rgba(74, 222, 128, 0.18)";
     ctx.fill();
 
     // Start dot (subtler)
     ctx.beginPath();
     ctx.arc(main.sx, main.sy, 3 * scale, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(74, 222, 128, 0.10)';
+    ctx.fillStyle = "rgba(74, 222, 128, 0.10)";
     ctx.fill();
   }
 
+  // ===== DEDENT CODE BLOCKS =====
+  function dedentCodeBlocks() {
+    var blocks = document.querySelectorAll("pre code, .highlight pre code");
+    for (var i = 0; i < blocks.length; i++) {
+      var code = blocks[i];
+      var text = code.innerHTML;
+      var lines = text.split("\n");
+
+      // Strip leading/trailing empty lines
+      while (lines.length && lines[0].trim() === "") lines.shift();
+      while (lines.length && lines[lines.length - 1].trim() === "") lines.pop();
+
+      if (!lines.length) continue;
+
+      // Find minimum leading whitespace (tabs or spaces) across non-empty lines
+      var minIndent = Infinity;
+      for (var j = 0; j < lines.length; j++) {
+        if (lines[j].trim() === "") continue;
+        var match = lines[j].match(/^[\t ]+/);
+        var indent = match ? match[0].length : 0;
+        if (indent < minIndent) minIndent = indent;
+      }
+
+      // Strip common indent
+      if (minIndent > 0 && minIndent < Infinity) {
+        for (var k = 0; k < lines.length; k++) {
+          lines[k] = lines[k].substring(minIndent);
+        }
+        code.innerHTML = lines.join("\n");
+      }
+    }
+  }
 
   // ===== INIT =====
   function init() {
-    var swatches = document.querySelectorAll('.noise-swatch');
+    dedentCodeBlocks();
+    var swatches = document.querySelectorAll(".noise-swatch");
     for (var i = 0; i < swatches.length; i++) {
       renderNoiseSwatch(swatches[i]);
     }
@@ -253,16 +320,16 @@
 
   // ===== DEBOUNCED RESIZE =====
   var resizeTimer;
-  window.addEventListener('resize', function() {
+  window.addEventListener("resize", function () {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
+    resizeTimer = setTimeout(function () {
       renderArticleHero();
     }, 150);
   });
 
   // ===== RUN ON DOM READY =====
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }
