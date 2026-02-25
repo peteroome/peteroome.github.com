@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-description: "Pete Roome is a founder, CTO, and product leader based in London. Currently building AI-native tools for automotive parts procurement at Carpata. Previously Head of Product at Cazoo, Product Manager at Lyst and Wonderbly, and co-founder of several startups."
+description: "Pete Roome is a founder, CTO, and product leader based in London. Currently building AI-native tools for automotive parts procurement at Carpata. Previously Head of Product at Cazoo, Product Manager at Wonderbly and Lyst, and co-founder of several startups."
 ---
 
 <section class="prose" style="padding-top: 4rem;" markdown="1">
@@ -10,29 +10,39 @@ description: "Pete Roome is a founder, CTO, and product leader based in London. 
 
 I'm Pete Roome -- a founder, CTO, and product leader based in London.
 
-I'm currently CTO at [Carpata](https://carpata.com) where we're building AI-native tools for automotive parts procurement. We're solving a deceptively hard problem: helping garages, fleets, and dealers find and order the right parts for any vehicle, first time. It sits at the intersection of messy real-world data, complex vehicle catalogues, and the kind of supply chain that hasn't changed much in decades.
+I spent the first twelve years of my career as a software engineer, building things. Then I spent eight years in product, figuring out *what* to build. Now I'm back building again -- this time as CTO and co-founder of [Carpata](https://carpata.com).
+
+### What I'm building
+
+Carpata makes AI-native tools for automotive parts procurement. We help garages, fleets, and dealers find and order the right parts for any vehicle, first time.
+
+That sounds simple. It isn't. The automotive aftermarket has a 20% return rate on parts -- not because people are indecisive, but because the underlying data is broken. The industry runs on decades of messy catalogues, fragmented supplier systems, and a supply chain that hasn't been meaningfully digitised. We're building the intelligence layer that makes sense of all of it.
 
 ### Background
 
-I've spent most of my career at the intersection of product and technology -- figuring out what to build and then building it.
+Before Carpata I was Head of Product at [Cazoo](https://www.cazoo.co.uk/), leading product development across up to eight teams. I joined as Lead Product Manager, shipped car subscriptions, led international expansion, and delivered a full pivot from end-to-end dealer to marketplace during significant restructuring.
 
-Before Carpata I was Head of Product at [Cazoo](https://www.cazoo.co.uk/), leading product development across up to eight teams. I joined as Lead Product Manager and shipped car subscriptions, international expansion, and a full pivot from end-to-end dealer model to marketplace during a significant restructuring.
+Before that I was Product Lead at [Vinterior](https://www.vinterior.co/) (vintage furniture marketplace) and Product Manager at [Wonderbly](https://www.wonderbly.com/) (personalised children's books). At Wonderbly I started on the engineering side -- I designed their CRM infrastructure and grew email marketing from zero to £2m revenue before moving into product.
 
-Before that I was Product Lead at [Vinterior](https://www.vinterior.co/) (vintage furniture marketplace), Product Manager at [Wonderbly](https://www.wonderbly.com/) (personalised children's books), and at [Lyst](https://www.lyst.com/) (fashion search engine) where I grew email marketing from zero to £2m revenue p.a.
+I started my career at [Kyan](https://kyan.com/), a digital agency where I learned to build things properly -- and had a lot of fun doing it.
 
-I've also co-founded several startups. [Sisu](https://www.madebysisu.com/) turned your exercise data into art. At [Upstate](https://upstate.io/), a startup studio, we built and launched products like Pingle (Tinder for groups) and Akin (a people search engine). Building things from scratch is where I'm most at home.
+### Starting from scratch
+
+I keep coming back to zero-to-one building. I co-founded Sisu, which turned your exercise data into art. At Upstate, a startup studio, we built and launched Pingle (Tinder for groups) and Akin (a people search engine). Carpata is the same instinct applied to a bigger problem -- find something broken, build something real, learn fast.
+
+One thing that's changed this time round is how I'm building. After years away from code, AI tools have put me back in the editor -- not as the engineer I was a decade ago, but as something new. It's the most tangible example I have of what it means to build products *with* AI, not just *about* AI, and it's shaping how I think about everything we're doing at Carpata.
 
 ### What I write about
 
 This blog is where I think out loud about what I'm learning. The topics that keep coming back:
 
-- **AI-native product development** -- building products where AI is a core capability rather than a bolt-on feature. What's different about the product process when your product's behaviour is probabilistic.
-- **Startup engineering** -- the trade-offs, shortcuts, and decisions that come with building technology in a small team with limited time and money.
 - **Product thinking** -- how to figure out what to build, how to validate it, and how to know when you're wrong.
+- **AI-native product development** -- what's different about the product process when your product's behaviour is probabilistic. Not the hype, but the practical reality: what happens when your system is 80% accurate and you need to design around the other 20%.
+- **Startup engineering** -- the trade-offs, shortcuts, and decisions that come with building technology in a small team with limited time and money.
 
 ### Outside work
 
-I'm an endurance sports enthusiast -- I've cycled London to Barcelona, London to Paris in under 24 hours, and ran the Jurassic Coast Challenge half marathon. I have two young kids who are teaching me more about patience and prioritisation than any management course ever did.
+Before children, I was an endurance sports enthusiast -- I cycled London to Barcelona, London to Paris in under 24 hours, and ran a 10k inside the Arctic Circle. Now I have two young kids who are teaching me more about patience and prioritisation than any management course ever did.
 
 ### Get in touch
 

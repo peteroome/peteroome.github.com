@@ -31,7 +31,7 @@ layout: default
       <span class="meta-sep"></span>
       <span>{{ minutes }} min read</span>
       <span class="meta-sep"></span>
-      <span>{{ words }} words</span>
+      <span>{% if words >= 1000 %}{% assign w_thou = words | divided_by: 1000 %}{% assign w_rem = words | modulo: 1000 %}{% if w_rem < 10 %}{{ w_thou }},00{{ w_rem }}{% elsif w_rem < 100 %}{{ w_thou }},0{{ w_rem }}{% else %}{{ w_thou }},{{ w_rem }}{% endif %}{% else %}{{ words }}{% endif %} words</span>
     </div>
   </div>
 </div>

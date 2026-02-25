@@ -1,3 +1,5 @@
+---
+---
 /* ============================================================
    DESIGN TOKENS
    ============================================================ */
@@ -891,7 +893,7 @@ a.sna-item:hover {
 .pagination-link.disabled {
   color: var(--text-dim);
   pointer-events: none;
-  opacity: 0.4;
+  cursor: default;
 }
 .pagination-info {
   font-family: var(--font-mono);
