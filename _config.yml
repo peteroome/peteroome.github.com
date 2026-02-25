@@ -1,28 +1,31 @@
 name: Pete Roome
-description: Thinking of a Product Manager, code Snippets and activities.
+description: "Writing about building products with AI, from the inside."
 url: https://peteroome.com
 baseurl: ''
 include: [.htaccess]
 
-stylus:
-  compress: true
-  path: ./css
+author:
+  name: Pete Roome
+  title: CTO at Carpata
+  bio: "CTO at Carpata. Building AI-native tools for automotive parts procurement. Writing about what works and what doesn't in AI-native product development."
+  linkedin: https://www.linkedin.com/in/peteroome/
+  github: https://github.com/peteroome
 
+permalink: /:year/:month/:day/:title/
 paginate: 5
-highlighter: "pygments"
+highlighter: rouge
 
-sitemap:
-  file: "/sitemap.xml"
-  exclude:
-    - "/atom.xml"
-    - "/feed.xml"
-    - "/feed/index.xml"
-    - "/css/all.css"
-  include_posts:
-    - "/index.html"
-  change_frequency_name: "change_frequency"
-  priority_name: "priority"
+sass:
+  style: compressed
 
 plugins:
   - jekyll-redirect-from
   - jekyll-paginate
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post

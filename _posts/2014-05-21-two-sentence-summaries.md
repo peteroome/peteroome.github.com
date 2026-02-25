@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: 'Two Sentence Summaries #1'
+redirect_from:
+  - /2014/05/21/two-sentence-summaries.html
 ---
 
 I've met a lot of great people recently. Mostly entrepreneurs with great stories to tell, great ambition and an ever greater work ethics. These people are inspirational and what makes it even better (selfishly for me) is they're experiencing the same problems I do, on a daily basis, as I do too. And they're armed: with advice, with work/tech/marketing/life hacks and with ideas too.

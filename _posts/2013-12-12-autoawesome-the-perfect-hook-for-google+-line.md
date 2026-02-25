@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: "Auto Awesome, The Perfect Hook For The Google+ Line"
+redirect_from:
+  - /2013/12/12/autoawesome-the-perfect-hook-for-google+-line.html
 ---
 
 It took a little while, what's it been, a couple of years since we first saw Google+ arrive onto our screens? It's been a battle to say the least (from an outsiders perspective anyway). Google+ doesn't seem to have resonated with any of my friends or colleagues, until now that is, until Auto Awesome came along.

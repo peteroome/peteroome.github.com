@@ -1,1 +1,3 @@
-sitemap: http://cdn.snapsitemap.com/sitemap/99091.xml.gz
+User-agent: *
+Allow: /
+Sitemap: https://peteroome.com/sitemap.xml

@@ -1,9 +1,9 @@
 ---
-layout: post
-comments: true
 title: "UK Coast 2 Coast (C2C): Whitehaven to Sunderland. A two day adventure"
 author: Pete Roome
 image: /images/2016-05-04-whitehaven-to-sunderland-coast-2-coast-c2c-uk/c2c-whitehaven-to-sunderland.jpg
+redirect_from:
+  - /2016/05/04/whitehaven-to-sunderland-coast-2-coast-c2c-uk.html
 ---
 
 Here at Sisu we like a cycle ride, especially one that will challenge us a little bit. Recently we embarked on a trip up north to Yorkshire, from London, to ride the [UK Coast 2 Coast (C2C), from Whitehaven to Sunderland](https://en.wikipedia.org/wiki/Sea_to_Sea_Cycle_Route). We had no idea quite how beautiful, challenging and fun the ride would be.

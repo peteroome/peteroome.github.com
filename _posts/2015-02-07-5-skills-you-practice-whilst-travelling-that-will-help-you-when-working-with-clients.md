@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: 5 skills you practice whilst travelling that will help you when working with clients
+redirect_from:
+  - /2015/02/07/5-skills-you-practice-whilst-travelling-that-will-help-you-when-working-with-clients.html
 ---
 
 I've recently returned from a surprise trip to Marrakech in Morocco, with my sister. It was just the two of us, on a brief hiatus from the British Winter and it was extremely welcome.

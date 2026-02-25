@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Passive Apps to Accelerate Serendipity and Create Incredible Experiences
+redirect_from:
+  - /2014/01/22/passively-active-apps-for-consumers-in-a-big-data-era.html
 ---
 
 I’ve been working on a mobile app, [Pingle](http://www.joinpingle.com), for 3-4 months now. We’re in a beta/[soft launch](http://bit.ly/1cW9n6M "Pingle on the Google Play Store") phase and like a lot of other app developers our biggest time and energy sap is user acquisition - not growth hacking per-se but more a general need for a handful of users simply to test our assumptions. 

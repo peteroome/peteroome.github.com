@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Growth Hacking A Personalised Print Business Using Strava Segments
+redirect_from:
+  - /2016/10/11/growth-hacking-a-personalised-print-business-using-strava-segments.html
 ---
 
 I've recently [started to document my endeavours](http://www.peteroome.com/2016/10/01/validating-a-personalised-print-business-aimed-at-cycling-and-running-enthusiasts.html) in getting [my personalised print business](https://www.madewithsisu.com/) off the ground and generating a bit more revenue. This post is my first attempt at documenting and formalising one of the growth hacks I'm experimenting with. I’ll work to a standardised format when I do write them up and I hope the process might spark more ideas for the future, or even for you the reader.

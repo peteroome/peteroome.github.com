@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: 'All Rise For Standing Desk'
+redirect_from:
+  - /2014/05/27/all-rise-for-standing-desk.html
 ---
 
 Back on the 23rd April I took the decision to stop sitting. Well, to stop sitting as much as I had been, anyway.

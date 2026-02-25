@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Running Jekyll on Github Pages
+redirect_from:
+  - /2013/10/14/running-jekyll-on-github-pages.html
 ---
 
 So to expand on my first post, i decided it was high time i got myself a little site together, even if it was just for snippets and general opinions and thoughts.

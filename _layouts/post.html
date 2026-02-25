@@ -1,22 +1,55 @@
-{% include header.html %}
-<section class="content">
-  <article>
-    <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
-    <div class='meta'>
-      <h4>{{ page.date | date: "%d/%m/%Y" }}, {{ page.content | reading_length }}</h4>
-    </div>
-    {% if page.image %}
-      <a href="{{ page.url }}" title="Read: {{ page.title }}"><img class="postHeader" src="{{ page.image }}" /></a>
+---
+layout: default
+---
+{% assign words = content | number_of_words %}
+{% assign minutes = words | divided_by: 200 %}
+{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+
+<div class="article-hero" id="article-hero">
+  {% if page.image %}
+  <img src="{{ page.image }}" alt="{{ page.title }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+  {% else %}
+  <canvas class="article-hero-canvas" id="article-hero-canvas" data-title="{{ page.title }}"></canvas>
+  {% endif %}
+  <div class="article-hero-content">
+    <a href="/" class="article-back">&larr; All posts</a>
+    {% if page.series %}
+    {% assign series_info = site.data.series | where: "id", page.series | first %}
+    {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
+    {% assign series_index = 0 %}
+    {% for sp in series_posts %}
+      {% if sp.url == page.url %}{% assign series_index = forloop.index %}{% endif %}
+    {% endfor %}
+    <div class="article-tag-line">{{ series_info.title }} &mdash; Part {{ series_index }} of {{ series_info.total }}</div>
     {% endif %}
-    {{ content }}
-
-    <div class="article-footer">
-      <p>by <a href="https://www.linkedin.com/in/peteroome/" title="Pete on LinkedIn">Pete Roome</a></p>
-      <p><small>Product Manager at <a href="https://www.cazoo.co.uk/?utm_source=peteroome&utm_medium=blog-post&utm_campaign=petes-blog" title="Cazoo" target="_blank">Cazoo</a>.</small></p>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="article-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    <div class="article-meta">
+      <span>{{ page.date | date: "%-d %b %Y" }}</span>
+      <span class="meta-sep"></span>
+      <span>{{ minutes }} min read</span>
+      <span class="meta-sep"></span>
+      <span>{% if words >= 1000 %}{% assign w_thou = words | divided_by: 1000 %}{% assign w_rem = words | modulo: 1000 %}{% if w_rem < 10 %}{{ w_thou }},00{{ w_rem }}{% elsif w_rem < 100 %}{{ w_thou }},0{{ w_rem }}{% else %}{{ w_thou }},{{ w_rem }}{% endif %}{% else %}{{ words }}{% endif %} words</span>
     </div>
+  </div>
+</div>
 
-    {% include comments.html %}
-  </article>
-</section>
+{% include series-nav.html %}
+
+<article class="prose">
+  {{ content }}
+</article>
+
+<div class="author-card">
+  <div class="author-avatar-slot">
+    <canvas class="noise-swatch" data-title="{{ page.title }}" width="96" height="96" style="width:48px;height:48px;border-radius:10px;display:block;"></canvas>
+  </div>
+  <div class="author-info">
+    <h4>{{ site.author.name }}</h4>
+    <p>{{ site.author.bio }}</p>
+  </div>
+</div>
+
 {% include previous_next.html %}
-{% include footer.html %}

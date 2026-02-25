@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
-gem 'jekyll', '~> 3.8.5'
-gem 'github-pages', '204'
-gem 'stylus', '~> 1.0.2'
-gem 'pygments.rb', '~> 2.3.0'
+gem 'jekyll', '~> 4.3'
 gem 'rake'
+gem 'jekyll-sitemap'
+gem 'jekyll-redirect-from'
+gem 'jekyll-paginate'
+gem 'rouge'
+
+gem "webrick", "~> 1.8"

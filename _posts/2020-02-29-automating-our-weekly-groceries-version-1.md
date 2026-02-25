@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Automating my family's grocery shopping to reduce costs and waste.
+redirect_from:
+  - /2020/02/29/automating-our-weekly-groceries-version-1.html
 ---
 
 I love food and I love cooking, but I loathe grocery shopping. Deciding what to cook and the time it takes to find the groceries (in-store and online) is painful. Like everyone else I'm kind of busy and would rather spend my spare time with my family and friends. In addition, I casually follow the FIRE (Financial Independence Retire Early) mentality, minimising living costs where possible. I hate waste too - particularly food waste. So I have made it my mission recently to see what I can do to make this weekly chore less expensive, less wasteful and generally simpler.

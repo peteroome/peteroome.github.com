@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: "Automating my family’s grocery shopping to reduce costs and waste: user testing, emailing recipes and Task Rabbit"
+redirect_from:
+  - /2020/04/28/automating-my-familys-grocery-shopping-to-reduce-costs-and-waste-user-testing-emailing-recipes-and-task-rabbit.html
 ---
 
 Hello 👋, I'm Pete and I've been working on a side-project to 100% automate my family's grocery shopping. Here is what I've been working on in the last few weeks.

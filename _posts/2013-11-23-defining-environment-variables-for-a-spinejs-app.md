@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Defining and exposing environment variables with Hem for use in a SpineJS app.
+redirect_from:
+  - /2013/11/23/defining-environment-variables-for-a-spinejs-app.html
 ---
 
 I like defining environment variables - they allow me to keep my code clean and tidy when it comes to using things like API keys & secrets, usernames, passwords, connection strings etc. So where possible i use environment variables to extract the repetitive use of these. The aspect of my job that this helps with the most is when things change, later down the line. I don't have that nervous job of making sure i've updated API keys and secrets in every place within my app; a couple of changes to the environment variables and we're good to go.

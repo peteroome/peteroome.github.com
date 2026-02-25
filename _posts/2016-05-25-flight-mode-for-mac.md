@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Flight Mode for Mac
+redirect_from:
+  - /2016/05/25/flight-mode-for-mac.html
 ---
 
 Having pulled out my laptop, whilst sat on a flight to NY, it occurred to me that there should be a flight mode for laptops (if this doesn't already exist?!).

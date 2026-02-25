@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     {% include meta.html %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ "/css/all.css" | prepend: full_base_url }}">
-    <link rel="stylesheet" type="text/css" href="/css/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>{{ site.name }} - {{ page.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Inter:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Inter:wght@400;500&display=swap"></noscript>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    {% include structured-data.html %}
+    <title>{% if page.title and page.layout == 'post' %}{{ page.title }} - {{ site.name }}{% else %}{{ site.name }} - {{ site.description }}{% endif %}</title>
   </head>
   <body>
-    {% include analytics.html %}
-    <header>
-      <nav>
-        <a href="/index.html" class="home" >Peter Roome</a>
-        <a href="https://twitter.com/zoltarSpeaks" target="_blank" class="twitter">@zoltarSpeaks</a>
+    <header class="site-header">
+      <a href="/" class="logo">Pete Roome</a>
+      <nav class="header-nav" aria-label="Main">
+        <a href="/">Writing</a>
+        <a href="/about/">About</a>
+        <a href="https://www.linkedin.com/in/peteroome/" target="_blank" rel="noopener">LinkedIn</a>
       </nav>
     </header>

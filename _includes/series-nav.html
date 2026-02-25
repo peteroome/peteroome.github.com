@@ -1,0 +1,23 @@
+{% if page.series %}
+{% assign series_info = site.data.series | where: "id", page.series | first %}
+{% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
+<nav class="series-nav-article">
+  <div class="sna-head">{{ series_info.title }}</div>
+  {% assign num = 0 %}
+  {% for sp in series_posts %}
+  {% assign num = num | plus: 1 %}
+  <a href="{{ sp.url }}" class="sna-item{% if sp.url == page.url %} current{% endif %}">
+    <span class="sna-num">{{ num | prepend: '00' | slice: -2, 2 }}</span>
+    {{ sp.title }}
+  </a>
+  {% endfor %}
+  {% assign remaining = series_info.total | minus: num %}
+  {% for i in (1..remaining) %}
+  {% assign idx = num | plus: forloop.index %}
+  <div class="sna-item">
+    <span class="sna-num">{{ idx | prepend: '00' | slice: -2, 2 }}</span>
+    Coming soon
+  </div>
+  {% endfor %}
+</nav>
+{% endif %}

@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Track your Mac's logs whilst upgrading to Mavericks
+redirect_from:
+  - /2013/11/25/track-your-macs-logs-whilst-upgrading-to-mavericks.html
 ---
 
 I was installing the latest OSX upgrade, Mavericks, the other day when my little Macbook Air seemed to be hanging. Normally i don't worry about these things. I've not had any fatal problems when upgrading an OS before, touch wood - so i had no reason to worry. However, at this point i'd been out to lunch, sat catching up with news on my phone and about 2 hours had passed since i started the upgrade.

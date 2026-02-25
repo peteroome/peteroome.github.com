@@ -1,8 +1,8 @@
 ---
-layout: post
-comments: true
 title: Growth hacking using Javascript to automate following, unfollowing and connecting on Twitter and LinkedIn
 image: /images/2015-09-15-growth-twitter-and-linkedin/post-header.png
+redirect_from:
+  - /2015/09/15/growth-twitter-and-linkedin.html
 ---
 
 It's difficult to test the validity of an Internet startup without data. Most of the time this means having an audience that you can test your product on, to collect some data. Without an audience, you're not going to prove any hypotheses on your product.

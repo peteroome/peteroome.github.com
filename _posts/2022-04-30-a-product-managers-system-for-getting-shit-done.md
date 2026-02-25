@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
-title: "A Product Managers system for “getting shit done”"
+title: A Product Managers system for getting shit done
+redirect_from:
+  - /2022/04/30/a-product-managers-system-for-getting-shit-done.html
 ---
 
 As a product manager, not only do I have to get shit done, but I also have to get the right shit done. As my seniority and responsibilities have increased, it’s become more and more important for me to build a system for managing my workload.

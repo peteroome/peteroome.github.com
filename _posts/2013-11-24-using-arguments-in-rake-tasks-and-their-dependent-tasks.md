@@ -1,7 +1,7 @@
 ---
-layout: post
-comments: true
 title: Using arguments in Rake tasks and their dependent tasks too.
+redirect_from:
+  - /2013/11/24/using-arguments-in-rake-tasks-and-their-dependent-tasks.html
 ---
 
 I'm trying to slowly automate my workflow during the development of Pingle, the project i'm currently working on.
