@@ -1,0 +1,4 @@
+{% capture inline_css %}
+@import "fonts", "style", "syntax";
+{% endcapture %}
+<style>{{ inline_css | scssify }}</style>

@@ -3,12 +3,8 @@
   <head>
     {% include meta.html %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Inter:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Inter:wght@400;500&display=swap"></noscript>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    {% include inline-css.html %}
     {% include structured-data.html %}
     <title>{% if page.title and page.layout == 'post' %}{{ page.title }} - {{ site.name }}{% else %}{{ site.name }} - {{ site.description }}{% endif %}</title>
   </head>
