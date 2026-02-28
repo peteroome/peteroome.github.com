@@ -312,10 +312,20 @@
   function init() {
     dedentCodeBlocks();
     var swatches = document.querySelectorAll(".noise-swatch");
-    for (var i = 0; i < swatches.length; i++) {
-      renderNoiseSwatch(swatches[i]);
+    var idx = 0;
+    function renderNext() {
+      if (idx < swatches.length) {
+        renderNoiseSwatch(swatches[idx++]);
+        requestAnimationFrame(renderNext);
+      } else {
+        requestAnimationFrame(renderArticleHero);
+      }
     }
-    renderArticleHero();
+    if (swatches.length) {
+      requestAnimationFrame(renderNext);
+    } else {
+      requestAnimationFrame(renderArticleHero);
+    }
   }
 
   // ===== DEBOUNCED RESIZE =====
