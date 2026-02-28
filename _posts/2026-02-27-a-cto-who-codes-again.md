@@ -1,7 +1,6 @@
 ---
 title: A CTO who builds again
 subtitle: After 8 years in product, AI tools let me build again — and do everything else better.
-series: building-from-the-inside
 ---
 
 Last month I built an internal tool that uses LLMs to map vehicle specifications to parts catalogue codes. It takes a vehicle registration, runs it through a few layers of logic, and works out which variant of a brake pad or oil filter fits. Our automotive domain expert does this manually - it's the gold standard that we hold the automation that we build to.
