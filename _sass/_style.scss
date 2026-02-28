@@ -929,7 +929,6 @@ a.sna-item:hover {
 @media (max-width: 768px) {
   .site-header,
   .hero,
-  .series-callout,
   .posts-section,
   .article-hero-content,
   .series-nav-article,
@@ -942,6 +941,11 @@ a.sna-item:hover {
     padding-right: 1.5rem;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .series-callout {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 
   .hero h1 {
