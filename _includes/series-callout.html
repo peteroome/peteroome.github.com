@@ -1,20 +1,16 @@
-{% for s in site.data.series %}
-{% assign series_posts = site.posts | where: "series", s.id | sort: "date" %}
-{% assign published = series_posts | size %}
-{% if published > 0 %}
-<section class="series-callout">
+{% assign latest = site.posts | first %}
+{% if latest %}
+<a href="{{ latest.url }}" class="series-callout" style="display:block;text-decoration:none;color:inherit;">
   <div class="sc-top">
     <div class="sc-dot"></div>
-    <div class="sc-label">Current Series</div>
+    <div class="sc-label">Latest</div>
   </div>
-  <h2>{{ s.title }}</h2>
-  <p>{{ s.description }}</p>
-  <div class="series-progress">
-    {% for i in (1..s.total) %}
-    <div class="seg{% if i <= published %} done{% endif %}"></div>
-    {% endfor %}
-  </div>
-  <div class="series-progress-meta">{{ published }} of {{ s.total }} published</div>
-</section>
+  <h2>{{ latest.title }}</h2>
+  {% if latest.subtitle %}
+  <p>{{ latest.subtitle }}</p>
+  {% else %}
+  <p>{{ latest.excerpt | strip_html | truncatewords: 30 }}</p>
+  {% endif %}
+  <div class="series-progress-meta">{{ latest.date | date: "%-d %b %Y" }} &middot; {% assign w = latest.content | number_of_words %}{% assign m = w | divided_by: 200 %}{% if m < 1 %}{% assign m = 1 %}{% endif %}{{ m }} min read</div>
+</a>
 {% endif %}
-{% endfor %}

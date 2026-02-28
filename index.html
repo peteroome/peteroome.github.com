@@ -16,7 +16,9 @@ title: Building products with people and AI, from the inside.
 
 <section class="posts-section">
   <div class="section-label">All Posts</div>
+  {% assign latest = site.posts | first %}
   {% for post in paginator.posts %}
+  {% if post.url == latest.url %}{% continue %}{% endif %}
   <a href="{{ post.url }}" class="post-row">
     <div class="fingerprint-slot">
       <canvas class="noise-swatch" data-title="{{ post.title }}" width="112" height="112" style="width:56px;height:56px;border-radius:10px;display:block;"></canvas>

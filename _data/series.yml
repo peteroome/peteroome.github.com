@@ -1,4 +1,4 @@
-- id: ai-native
-  title: AI-Native Product Development
-  description: "A 7-part series on building products where AI is a core capability, not a bolt-on feature. Written from inside the build."
-  total: 7
+- id: building-from-the-inside
+  title: Building From the Inside
+  description: "Product thinking, AI-native development, and startup engineering — written from inside the build at a 5-person startup."
+  total: 18
