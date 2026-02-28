@@ -316,16 +316,12 @@
     function renderNext() {
       if (idx < swatches.length) {
         renderNoiseSwatch(swatches[idx++]);
-        requestAnimationFrame(renderNext);
+        setTimeout(renderNext, 0);
       } else {
-        requestAnimationFrame(renderArticleHero);
+        setTimeout(renderArticleHero, 0);
       }
     }
-    if (swatches.length) {
-      requestAnimationFrame(renderNext);
-    } else {
-      requestAnimationFrame(renderArticleHero);
-    }
+    setTimeout(renderNext, 0);
   }
 
   // ===== DEBOUNCED RESIZE =====
