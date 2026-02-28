@@ -4,6 +4,7 @@
     {% include meta.html %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
     <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
     {% include inline-css.html %}
     {% include structured-data.html %}
     <title>{% if page.title and page.layout == 'post' %}{{ page.title }} - {{ site.name }}{% else %}{{ site.name }} - {{ site.description }}{% endif %}</title>
